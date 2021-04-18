@@ -80,7 +80,7 @@ body {
     clear: right;
 }
 
-#bars {
+.bars {
     padding: 2.5vw;
     /* padding-left: 1.5vw; */
     height : 3vw;

@@ -1,7 +1,7 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="jquery.visible.min.js"></script>
+        <script src="isInViewport.min.js"></script>
         <script src="script.js"></script>
         <script
             src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
@@ -18,34 +18,34 @@
             </audio>
             <div class="topnav" id="slider">
                 <a href="javascript:void(0);" class="icon" id="icon" onclick="toggleMenu()">
-                    <img id="bars" src="images/menu.png">
+                    <img class="bars" id="menuBars" src="images/menu.png">
                 </a>
                 <a href="javascript:void(0);" class="icon" id="soundIcon" onclick="toggleSound()">
-                    <img id="bars" src="images/soundOff.png">
+                    <img class="bars" id="soundBars" src="images/soundOff.png">
                 </a>
                 <!-- <a href="" class="active">l</a> -->
                 <div id="links">
                     <div class="group">
                     <p class="groupTitle" href="lala">WHEEL OF JJIK</p>
-                    <a class="chapterTitle" href="1iamdead.html">I Am Dead</a>
-                    <a class="chapterTitle" href="2faintglare.html">A Faint Glare</a>
-                    <a class="chapterTitle" href="3overture.html">Overture</a>
-                    <a class="chapterTitle" href="4thebirth.html">The Birth</a>
-                    <a class="chapterTitle" href="5theSmelloftheAir.html">The Smell of the Air</a>
-                    <a class="chapterTitle" href="6aChild.html">A Child</a>
-                    <a class="chapterTitle" href="7fromBeginningtoEnd.html">From Beginning to End</a>
-                    <a class="chapterTitle" href="8blankEyes.html">Blank Eyes</a>
-                    <a class="chapterTitle" href="9thatBird.html">That Bird</a>
-                    <a class="chapterTitle" href="10warmSnow.html">Warm Snow</a>
-                    <a class="chapterTitle" href="11totheGreatbeyond.html">To the Great beyond</a>
-                    <a class="chapterTitle" href="12aLetter.html">A Letter</a>
-                    <a class="chapterTitle" href="13littlePeace.html">Little Peace</a>
-                    <a class="chapterTitle" href="14pixell.html">Pi>Cell</a>
-                    <a class="chapterTitle" href="15selfPortraits.html">Self-portraits</a>
-                    <a class="chapterTitle" href="16thePrivileged.html">The Privileged</a>
-                    <a class="chapterTitle" href="17aMillionRoses.html">A Million Roses</a>
-                    <a class="chapterTitle" href="18iamalive.html">I Am Alive!</a>
-                    <a class="chapterTitle" href="19quizzes.html">Quizzes</a>
+                    <a class="chapterTitle" id="T1iamdead" href="1iamdead.html">I Am Dead</a>
+                    <a class="chapterTitle" id="T2faintglare" href="2faintglare.html">A Faint Glare</a>
+                    <a class="chapterTitle" id="T3overture" href="3overture.html">Overture</a>
+                    <a class="chapterTitle" id="T4thebirth" href="4thebirth.html">The Birth</a>
+                    <a class="chapterTitle" id="T5theSmelloftheAir" href="5theSmelloftheAir.html">The Smell of the Air</a>
+                    <a class="chapterTitle" id="T6aChild" href="6aChild.html">A Child</a>
+                    <a class="chapterTitle" id="T7fromBeginningtoEnd" href="7fromBeginningtoEnd.html">From Beginning to End</a>
+                    <a class="chapterTitle" id="T8blankEyes" href="8blankEyes.html">Blank Eyes</a>
+                    <a class="chapterTitle" id="T9thatBird" href="9thatBird.html">That Bird</a>
+                    <a class="chapterTitle" id="T10warmSnow" href="10warmSnow.html">Warm Snow</a>
+                    <a class="chapterTitle" id="T11totheGreatbeyond" href="11totheGreatbeyond.html">To the Great beyond</a>
+                    <a class="chapterTitle" id="T12aLetter" href="12aLetter.html">A Letter</a>
+                    <a class="chapterTitle" id="T13littlePeace" href="13littlePeace.html">Little Peace</a>
+                    <a class="chapterTitle" id="T14pixell" href="14pixell.html">Pi>Cell</a>
+                    <a class="chapterTitle" id="T15selfPortraits" href="15selfPortraits.html">Self-portraits</a>
+                    <a class="chapterTitle" id="T16thePrivileged" href="16thePrivileged.html">The Privileged</a>
+                    <a class="chapterTitle" id="T17aMillionRoses" href="17aMillionRoses.html">A Million Roses</a>
+                    <a class="chapterTitle" id="T18iamalive" href="18iamalive.html">I Am Alive!</a>
+                    <a class="chapterTitle" id="T19quizzes" href="19quizzes.html">Quizzes</a>
                     </div>
                 </div>
             </div>
@@ -53,58 +53,144 @@
 
         <div id="content2" class="content">
             <img class="imageContent" style="max-width:100%;padding-top:30vw;padding-bottom:50vw;" src="images/eclipse.jpg">
-            <div id="1iamdead">
-            <div style="padding-top:40vw;padding-bottom:40vw;">
-            <video id="video2" class="imageContent" style="padding-top:0vw;padding-bottom:0vw;" muted="muted" playsinline="playsinline" loop>
-                <source src="1iamdead/0iamdead_webC.mp4" type="video/mp4">
-            </video>
-            </div>
-            <model-viewer
-                class="vrContent"
-                style="width:70vw;height:70vw;max-width:95%;"
-                src="1iamdead/1ratgltf/1rat.gltf"
-                alt=""
-                shadow-intensity="1"
-                exposure=".7"
-                camera-controls
-                environment-image="4thebirth/bggradient.jpg"
-                auto-rotate
-            ></model-viewer>
-            <!-- <img class="imageContent" src="1iamdead/1rat.jpg"> -->
-            <p class="textContent">"I am dead"</p>
-            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">I thought I heard the voice of a rat.</p>
-            <p class="textContent" style="margin-top:150vw;margin-bottom:50vw;">The rat was alive, <br/>but it looked as if it’s dead.</p>
-            <p class="textContent" style="margin-top:400vw;margin-bottom:50vw;">1. “Do people live here?” I asked my mom the day I saw a rat in the basement.</p>
-            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">2. The white rat in the laboratory is a life simulation.</p>
-            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">3. Mouse is a mouse.</p>
-            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">4. Rat brings you water.</p>
-            <p class="textContent" style="margin-top:300vw;margin-bottom:50vw;">A rat is semi-existant.</p>
-             <p class="textContent" style="margin-top:400vw;margin-bottom:50vw;">‘Jjik’ means squeak.</p>
-            <p class="textContent" style="margin-top:180vw;margin-bottom:50vw;">There is a saying that goes ‘can’t say Jjik even if you are stepped on’</p>
-            <p class="textContent" style="margin-top:270vw;margin-bottom:50vw;">Do those that live in basements know about the countless number of feet that are stepping on their heads?</p>
-            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">Do those doing the stepping know that there is someone beneath their feet?</p>
-            <img class="imageContent" style="padding-top:200vw;padding-bottom:50vw;" src="1iamdead/2lab.jpg">
-            <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">Unrealistic perception and scattered memories present to me a mixture of reality and the virtual.</p>
-            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">The rat says: <br/>"In the human world, I lived to deal with the mistakes that humans dropped in the sewers."</p>
-            <img class="imageContent" style="padding-top:100vw;padding-bottom:50vw;" src="1iamdead/3hole.jpg">
-            <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">"And now I am tasked with watching and caring for virtual beings in the wired world."</p>
-            <p class="textContent" style="margin-top:300vw;margin-bottom:50vw;">I imagine the virtual beings living in an in-between space under the water.</p>
-            <p class="textContent" style="margin-top:160vw;margin-bottom:50vw;">Our reflection in the undulating water look distorted because they are also ever so slightly reflected.</p>
-            <p class="textContent" style="margin-top:380vw;margin-bottom:50vw;">I have seen the empty eyes of my avatar.</p>
-            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">They were the eyes of a laborer working like a machine.</p>
-            <img class="imageContent" style="padding-top:150vw;padding-bottom:50vw;" src="1iamdead/4wired.jpg">
-            <p class="textContent" style="padding-top:200vw;padding-bottom:50vw;"> I think about some stories <br/>again and again.</p>
-            <p class="textContent" style="padding-top:100vw;padding-bottom:50vw;"> I am me. <br/> I am you. <br/> I am flat. <br/><br/> Then I sometimes disappear.</p>
-            <img class="imageContent" style="padding-top:250vw;padding-bottom:200vw;" src="1iamdead/5beings.jpg">
-            <p class="textContent">I repeat. <br/>The world repeats. <br/>And the stories that repeat repeats.</p>
-            <img class="imageContent" style="max-width:60%;padding-top:150vw;padding-bottom:150vw;" src="1iamdead/6wheel.jpg">
-            <p class="textContent">I pass them by going round and round on a treadmill but woe is me for this wheel is forever inescapable.</p>
-            <p class="textContent" style="padding-top:150vw;padding-bottom:50vw;"> Like a hamster in a hamster wheel.</p>
+
+            <div class="chapter" id="1iamdead">
+
+                <div class="viddiv" style="height:80vw;">
+                    <video id="video2" class="imageContent" style="margin-left: auto;margin-right: auto;" muted="muted" playsinline="playsinline" loop>
+                        <source src="1iamdead/0iamdead_webC.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <model-viewer
+                    class="vrContent"
+                    style="width:70vw;height:70vw;max-width:95%;"
+                    src="1iamdead/1ratgltf/1rat.gltf"
+                    alt=""
+                    shadow-intensity="1"
+                    exposure=".7"
+                    camera-controls
+                    environment-image="4thebirth/bggradient.jpg"
+                    auto-rotate
+                ></model-viewer>
+                <!-- <img class="imageContent" src="1iamdead/1rat.jpg"> -->
+                <p class="textContent">"I am dead"</p>
+                <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">I thought I heard the voice of a rat.</p>
+                <p class="textContent" style="margin-top:150vw;margin-bottom:50vw;">The rat was alive, <br/>but it looked as if it’s dead.</p>
+                <p class="textContent" style="margin-top:400vw;margin-bottom:50vw;">1. “Do people live here?” I asked my mom the day I saw a rat in the basement.</p>
+                <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">2. The white rat in the laboratory is a life simulation.</p>
+                <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">3. Mouse is a mouse.</p>
+                <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">4. Rat brings you water.</p>
+                <p class="textContent" style="margin-top:300vw;margin-bottom:50vw;">A rat is semi-existant.</p>
+                <p class="textContent" style="margin-top:400vw;margin-bottom:50vw;">‘Jjik’ means squeak.</p>
+                <p class="textContent" style="margin-top:180vw;margin-bottom:50vw;">There is a saying that goes ‘can’t say Jjik even if you are stepped on’</p>
+                <p class="textContent" style="margin-top:270vw;margin-bottom:50vw;">Do those that live in basements know about the countless number of feet that are stepping on their heads?</p>
+                <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">Do those doing the stepping know that there is someone beneath their feet?</p>
+                <img class="imageContent" style="padding-top:200vw;padding-bottom:50vw;" src="1iamdead/2lab.jpg">
+                <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">Unrealistic perception and scattered memories present to me a mixture of reality and the virtual.</p>
+                <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">The rat says: <br/>"In the human world, I lived to deal with the mistakes that humans dropped in the sewers."</p>
+                <img class="imageContent" style="padding-top:100vw;padding-bottom:50vw;" src="1iamdead/3hole.jpg">
+                <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">"And now I am tasked with watching and caring for virtual beings in the wired world."</p>
+                <p class="textContent" style="margin-top:300vw;margin-bottom:50vw;">I imagine the virtual beings living in an in-between space under the water.</p>
+                <p class="textContent" style="margin-top:160vw;margin-bottom:50vw;">Our reflection in the undulating water look distorted because they are also ever so slightly reflected.</p>
+                <p class="textContent" style="margin-top:380vw;margin-bottom:50vw;">I have seen the empty eyes of my avatar.</p>
+                <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">They were the eyes of a laborer working like a machine.</p>
+                <img class="imageContent" style="padding-top:150vw;padding-bottom:50vw;" src="1iamdead/4wired.jpg">
+                <p class="textContent" style="padding-top:200vw;padding-bottom:50vw;"> I think about some stories <br/>again and again.</p>
+                <p class="textContent" style="padding-top:100vw;padding-bottom:50vw;"> I am me. <br/> I am you. <br/> I am flat. <br/><br/> Then I sometimes disappear.</p>
+                <img class="imageContent" style="padding-top:250vw;padding-bottom:200vw;" src="1iamdead/5beings.jpg">
+                <p class="textContent">I repeat. <br/>The world repeats. <br/>And the stories that repeat repeats.</p>
+                <img class="imageContent" style="max-width:60%;padding-top:150vw;padding-bottom:150vw;" src="1iamdead/6wheel.jpg">
+                <p class="textContent">I pass them by going round and round on a treadmill but woe is me for this wheel is forever inescapable.</p>
+                <p class="textContent" style="padding-top:150vw;padding-bottom:50vw;"> Like a hamster in a hamster wheel.</p>
             </div>
 
-            <!-- <a href="2faintglare.html" class="next"> -->
-            <!-- <img id="bars" style="padding-top:50vw;padding-bottom:10vw;" src="images/next.png"> -->
-            <!-- </a> -->
+            <div class="chapter" id="2faintglare">
+                <div class="viddiv" style="padding-top:40vw;padding-bottom:40vw;">
+                    <video id="video2" class="imageContent" style="padding-top:0vw;padding-bottom:0vw;" muted="muted" playsinline="playsinline" loop>
+                        <source src="2faintglare/0faintglare_webC.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <model-viewer
+                    class="vrContent"
+                    style="width:70vw;height:70vw;max-width:95%;"
+                    src="2faintglare/vxmpr2pt3oyn/vxmpr2pt3oyn.gltf"
+                    alt=""
+                    shadow-intensity="1"
+                    exposure=".7"
+                    camera-controls
+                    environment-image="4thebirth/bggradient.jpg"
+                    auto-rotate
+                ></model-viewer>
+                <p class="textContent" style="margin-top:80vw;margin-bottom:150vw;">Everything</p>
+                <img class="imageContent" style="max-width:20%;padding-top:7vw;padding-bottom:7vw;" src="2faintglare/2e1.jpg">
+                <img class="imageContent" style="max-width:20%;padding-top:7vw;padding-bottom:7vw;" src="2faintglare/2e2.jpg">
+                <img class="imageContent" style="max-width:20%;padding-top:7vw;padding-bottom:7vw;" src="2faintglare/2e3.jpg">
+                <img class="imageContent" style="max-width:20%;padding-top:7vw;padding-bottom:7vw;" src="2faintglare/2e4.jpg">
+                <img class="imageContent" style="max-width:20%;padding-top:7vw;padding-bottom:7vw;" src="2faintglare/2e5.jpg">
+                <img class="imageContent" style="max-width:20%;padding-top:7vw;padding-bottom:7vw;" src="2faintglare/2e6.jpg">
+                <img class="imageContent" style="max-width:20%;padding-top:7vw;padding-bottom:7vw;" src="2faintglare/2e7.jpg">
+                <img class="imageContent" style="max-width:20%;padding-top:7vw;padding-bottom:7vw;" src="2faintglare/2e8.jpg">
+                <p class="textContent" style="margin-top:200vw;margin-bottom:80vw;">is in the middle</p>
+                <img class="imageContent" style="padding-top:80vw;padding-bottom:80vw;" src="2faintglare/3satl.jpg">
+                <p class="textContent" style="margin-top:80vw;margin-bottom:80vw;">and all</p>
+                <img class="imageContent" style="padding-top:30vw;" src="2faintglare/4m1.jpg">
+                <img class="imageContent" style="padding-top:30vw;" src="2faintglare/4m2.jpg">
+                <img class="imageContent" style="padding-top:30vw;padding-bottom:80vw;" src="2faintglare/4m3.jpg">
+                <p class="textContent" style="margin-top:80vw;margin-bottom:100vw;">are interconnected.</p>
+                <img class="imageContent" style="padding-top:150vw;padding-bottom:90vw;" src="2faintglare/5rock.jpg">
+            </div>
+
+            <div class="chapter" id="3overture">
+                <div class="viddiv" style="height:80vw;">
+                    <video id="video2" class="imageContent" style="margin-left: auto;margin-right: auto;" muted="muted" playsinline="playsinline" loop>
+                        <source src="3overture/0overture_webC.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <model-viewer
+                    class="vrContent"
+                    style="width:70vw;height:70vw;max-width:95%;"
+                    src="3overture/1cemgltf/1cem.gltf"
+                    alt=""
+                    shadow-intensity="1"
+                    exposure=".7"
+                    camera-controls
+                    environment-image="4thebirth/bggradient.jpg"
+                    auto-rotate
+                ></model-viewer>
+                <p class="textContent" style="margin-top:80vw;margin-bottom:80vw;">I was in deep agony.</p>
+                <img class="imageContent" style="max-width:40%;" src="3overture/2fojpg.jpg">
+                <p class="textContent" style="margin-top:80vw;margin-bottom:80vw;">What is life?</p>
+                <p class="textContent" style="margin-top:100vw;margin-bottom:80vw;">You don’t respond,</br>You stare into the camera,</br>You stare at the ceiling.</p>
+                <img class="imageContent" style="max-width:55%;" src="3overture/3ey.jpg">
+                <p class="textContent" style="margin-top:80vw;margin-bottom:80vw;">But you know me.</br> Don’t you?</p>
+                <img class="imageContent" style="max-width:70%;" src="3overture/4dan.jpg">
+                <p class="textContent" style="margin-top:40vw;margin-bottom:80vw;">I’m the best dancer.</p>
+                <p class="textContent" style="margin-top:300vw;margin-bottom:300vw;">Dancing</br></br>Dancing</br></br>Dancing</p>
+                <img class="imageContent" style="max-width:80%;padding-top:30vw;padding-bottom:30vw;" src="3overture/5mag.jpg">
+                <p class="textContent" style="margin-top:50vw;margin-bottom:100vw;">I think this does sound</br> kind of like magic.</p>
+                <img class="imageContent" style="max-width:68%;padding-top:20vw;padding-bottom:20vw;" src="3overture/6beau.jpg">
+                <p class="textContent" style="margin-top:50vw;margin-bottom:150vw;">I love magic.</br>I think it’s beautiful.</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>So it’s a lie!</p>
+                <img class="imageContent" style="max-width:18%;padding-top:100vw;padding-bottom:100vw;" src="3overture/7cam.jpg">
+                <p class="textContent" style="margin-top:90vw;margin-bottom:80vw;"> Blank eyes</br>
+                    Blank eyes</br></></br></br></br></br></br></br></br></br></br></br></br></></br></br></br></br></br></br></br></br></br></br></br></></br></br></br></br></br></br></br></br></br></br></br></></br></br></br></br></br></br></br></br></br></br>So you cannot stay with me.</p>
+                <img class="imageContent" style="max-width:68%;padding-top:200vw;padding-bottom:20vw;" src="3overture/8merr.jpg">
+                <p class="textContent" style="margin-top:50vw;margin-bottom:250vw;">I have no idea where I’m going.</p>
+                <img class="imageContent" style="max-width:68%;padding-top:20vw;padding-bottom:20vw;" src="3overture/9pr.jpg">
+                <p class="textContent" style="margin-top:50vw;margin-bottom:50vw;">I’ll give you an idea of what you’re willing to get yourself killed for.</p>
+                <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">I wondered if that might help you.</p>
+                <img class="imageContent" style="max-width:68%;padding-top:20vw;padding-bottom:20vw;" src="3overture/10ro.jpg">
+                <p class="textContent" style="margin-top:200vw;margin-bottom:90vw;">You think this can happen to anyone?</p>
+                <img class="imageContent" style="max-width:70%;padding-top:20vw;padding-bottom:20vw;" src="3overture/11ar.jpg">
+                <p class="textContent" style="margin-top:50vw;margin-bottom:50vw;">They belong to other people.</p>
+                <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">Do you want them?</br></br></br></></br></br></br></br></br></br></br></br></br></br></br></></br></br></br></br></br></br></br></br></br></br></br></br></br></></br></br></br></br></br></br></br></br></br></br></br></></br></br></br></br></br></br></br></br></br></br>I do.</p>
+                <p class="textContent" style="margin-top:500vw;margin-bottom:250vw;">Haven’t you been told to be happy?</p>
+                <p class="textContent" style="margin-top:150vw;margin-bottom:50vw;">I have been told many times </br>to be happy.</p>
+                <p class="textContent" style="margin-top:500vw;margin-bottom:400vw;">You...</p>
+                <p class="textContent" style="margin-top:100vw;margin-bottom:100vw;">Blank eyes</br> Blank eyes</p>
+            </div>
+
         </div>
 
 

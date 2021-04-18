@@ -7,7 +7,7 @@ function toggleMenu() {
         x.style.display = "block";
     }
 
-    let m = document.getElementById("bars");
+    let m = document.getElementById("menuBars");
     let ic = document.getElementById("icon");
     let sic = document.getElementById("soundIcon");
     if (m.src.endsWith("images/menu.png")) {
@@ -45,22 +45,22 @@ var isMobile = true;
 //     // window.stop();
 // }
 
-$(window).scroll(function() {
-    $('video').each(function(){
-        if ($(this).visible(true)) {
-            $(this)[0].play();
-        } else {
-            $(this)[0].pause();
-        }
-    });
-    // $('.chapter').each(function(){
-    //     if ($(this).visible(true)){
-    //         // this.id;
-    //     }
-    // });
-});
 
 window.onload = function (){
+    $(window).scroll(function() {
+        $('video').each(function(){
+            if ($(this).is(':in-viewport(400)')) {
+                $(this)[0].play();
+            } else {
+                $(this)[0].pause();
+            }
+        });
+        $('.chapterTitle').css({'text-decoration':'none'});
+        $('.chapter:in-viewport(100)').each(function(){
+            let chpT = document.getElementById('T'+$(this)[0].id);
+            chpT.style.textDecoration = 'underline';
+        });
+    });
     if (isMobile){
         console.log("ismobile");
         let container = document.getElementById('content2');
@@ -75,15 +75,12 @@ window.onload = function (){
                 slider.classList.remove("slide-out");
 
                 slider.classList.add(isOpen ? 'slide-out' : 'slide-in');
-                console.log("inside div@@@");
             }
         });
 
         if (document.getElementById('video2') != undefined){
             document.getElementById('video2').addEventListener('ended', videoHandler, false);
 
-            // document.getElementById('video2').style.display = 'none';
-            // document.getElementById('content2').style.display = 'block';
         } else {
             document.getElementById('content2').style.display = 'block';
             console.log("No video");
