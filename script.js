@@ -32,42 +32,42 @@ function toggleSound() {
         s.pause();
     }
 }
-var isMobile = true;
-// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-//     // true for mobile device
-//     isMobile = true;
-//     document.write("mobile device");
-//     console.log("mobile");
-// }else{
-//     // false for not mobile device
-//     isMobile = false;
-//     document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
-//     // window.stop();
-// }
+var isMobile;
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    // true for mobile device
+    isMobile = true;
+    document.write("mobile device");
+    console.log("mobile");
+}else{
+    // false for not mobile device
+    isMobile = false;
+    console.log("not mobile");
+    document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
+    // window.stop();
+}
 
 
 window.onload = function (){
-    $(window).scroll(function() {
-        $('video').each(function(){
-            if ($(this).is(':in-viewport(950)')) {
-                $(this)[0].play();
-            } else {
-                $(this)[0].pause();
-            }
-        });
-        $('.chapterTitle').css({'text-decoration':'none'});
-        $('.chapter:in-viewport(950)').each(function(){
-            let chpT = document.getElementById('T'+$(this)[0].id);
-            chpT.style.textDecoration = 'underline';
-        });
-    });
     if (isMobile){
         console.log("ismobile");
+        $(window).scroll(function() {
+            $('video').each(function(){
+                if ($(this).is(':in-viewport(950)')) {
+                    $(this)[0].play();
+                } else {
+                    $(this)[0].pause();
+                }
+            });
+            $('.chapterTitle').css({'text-decoration':'none'});
+            $('.chapter:in-viewport(950)').each(function(){
+                let chpT = document.getElementById('T'+$(this)[0].id);
+                chpT.style.textDecoration = 'underline';
+            });
+        });
         let container = document.getElementById('content2');
         let slider = document.getElementById('slider');
         document.addEventListener('click', function( event ) {
             if (container !== event.target && !container.contains(event.target)) {
-                console.log('clicking outside the div');
             } else {
                 let sList = slider.classList;
                 let isOpen = slider.classList.contains('slide-in');
@@ -83,10 +83,10 @@ window.onload = function (){
 
         } else {
             document.getElementById('content2').style.display = 'block';
-            console.log("No video");
         }
     } else {
         document.getElementById('contents').style.display = 'none';
+        document.getElementById('content2').style.display = 'none';
     }
 };
 function videoHandler(e) {
