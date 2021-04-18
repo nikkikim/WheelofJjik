@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <script
+            src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+            defer>
+         </script>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+
+        <!-- <video id="video2" class="eclipse" muted="muted" playsinline="playsinline" autoplay> -->
+        <!-- <source src="3overture/0overture_web.mp4" type="video/mp4"> -->
+        <!-- </video> -->
+
+
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <img id="bars" src="images/menu.png">
+            </a>
+            <div id="links">
+                <div class="group">
+                <p class="groupTitle" href="lala">PROLOGUE</p>
+                <a href="1iamdead.html">I Am Dead</a>
+                <a href="2faintglare.html">A Faint Glare</a>
+                <a href="3overture.html">Overture</a>
+                </div>
+
+                <div class="group">
+                <p class="groupTitle" href="lala">ACT ONE</p>
+                <a href="4thebirth.html">The Birth</a>
+                <a href="5theSmelloftheAir.html">The Smell of the Air</a>
+                <a href="6aChild.html">A Child</a>
+                <a href="7fromBeginningtoEnd.html">From Beginning to End</a>
+                <a href="8blankEyes.html">Blank Eyes</a>
+                <a href="9thatBird.html">That Bird</a>
+                <a href="10warmSnow.html">Warm Snow</a>
+                <a href="11totheGreatbeyond.html">To the Great beyond</a>
+                </div>
+
+                <div class="group">
+                <p class="groupTitle" href="lala">ACT TWO</p>
+                <a href="12aLetter.html">A Letter</a>
+                <a href="13littlePeace.html">Little Peace</a>
+                <a href="14pixell.html">Pi>Cell</a>
+                <a href="15selfPortraits.html">Self-portraits</a>
+                <a href="16thePrivileged.html">The Privileged</a>
+                <a href="17aMillionRoses.html">A Million Roses</a>
+                <a href="18iamalive.html">I Am Alive!</a>
+                <a href="19quizzes.html">Quizzes</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none;" id="content2" class="content">
+
+            <!-- <img class="imageContent" style="max-width:100%;margin-top:20vw;" src="3overture/1cem.jpg"> -->
+            <p class="textContent" style="margin-top:75vw;margin-bottom:100vw;">Remember the day<br/> when I came on shore.</p>
+            <img class="imageContent" style="padding-top:30vw;" src="7fromBeginningtoEnd/shore.jpg">
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">I was no longer cold <br/>and I could breathe.</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:150vw;"> There was gentle breeze <br/>and the colors in reflected sunlight danced.</p>
+            <img class="imageContent" style="padding-top:50vw;" src="7fromBeginningtoEnd/tree.jpg">
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;"> My heart flutters when I remember the things I no longer recall.</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;"> What could overflow my heart <br/>with joy </p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;"> more than remembering the day I die,  </p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;"> while coming to realize that <br/>I could never die.</p>
+            <img class="imageContent" style="padding-top:30vw;" src="7fromBeginningtoEnd/spi.jpg">
+            <p class="textContent" style="margin-top:500vw;margin-bottom:120vw;"> Words I found today:<br/><br/>Least concern<br/>Danse Sacrale<br/>Nightview of Seoul<br/>D-2914320+1<br/>TAAT TABTH AIOYI ISTIA</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;"> Words to find tomorrow:<br/><br/>Something that tastes like chicken<br/>Artemis<br/>25 hours<br/>An accidental brain<br/>Not enough cloud</p>
+            <p class="textContent" style="margin-top:400vw;margin-bottom:120vw;">Chuck said we will disappear if we cannot find a countermeasure.</p>
+            <p class="textContent" style="margin-top:250vw;margin-bottom:120vw;">At some time, the last star was born.</p>
+            <img class="imageContent" style="padding-top:30vw;" src="7fromBeginningtoEnd/laster.jpg">
+            <p class="textContent" style="margin-top:450vw;margin-bottom:120vw;">Other scenarios:<br/>Beginning-end</p>
+            <p class="textContent" style="margin-top:500vw;margin-bottom:120vw;">The sun falls.</p>
+            <img class="imageContent" style="padding-top:30vw;" src="7fromBeginningtoEnd/sf.jpg">
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">Simply, we cannot find a home.</p>
+            <p class="textContent" style="margin-top:500vw;margin-bottom:70vw;">I’m here and then I’m no longer here.</p>
+            <model-viewer
+                class="vrContent"
+                style="width:70vw;height:70vw;max-width:95%;"
+                src="7fromBeginningtoEnd/fromBeginningtoEnd.glb"
+                ios-src="7fromBeginningtoEnd/fromBeginningtoEnd.usdz"
+                alt=""
+                shadow-intensity="1"
+                exposure=".7"
+                camera-controls
+                environment-image="4thebirth/bggradient.jpg"
+                auto-rotate
+                ar
+            >
+                <input type="image" src="vr.png" slot="ar-button" style="border: none; position: absolute; bottom:3vw;right:2vw;"/>
+                <!-- </button> -->
+            </model-viewer>
+
+
+                <a href="8blankEyes.html" class="next">
+                    <img id="bars" style="padding-top:50vw;padding-bottom:10vw;" src="images/next.png">
+                </a>
+        </div>
+
+
+        <div>
+        </div>
+
+
+    </body>
+</html>

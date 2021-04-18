@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <script
+            src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+            defer>
+         </script>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+
+        <!-- <video id="video2" class="eclipse" muted="muted" playsinline="playsinline" autoplay> -->
+        <!-- <source src="3overture/0overture_web.mp4" type="video/mp4"> -->
+        <!-- </video> -->
+
+
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <img id="bars" src="images/menu.png">
+            </a>
+            <div id="links">
+                <div class="group">
+                <p class="groupTitle" href="lala">PROLOGUE</p>
+                <a href="1iamdead.html">I Am Dead</a>
+                <a href="2faintglare.html">A Faint Glare</a>
+                <a href="3overture.html">Overture</a>
+                </div>
+
+                <div class="group">
+                <p class="groupTitle" href="lala">ACT ONE</p>
+                <a href="4thebirth.html">The Birth</a>
+                <a href="5theSmelloftheAir.html">The Smell of the Air</a>
+                <a href="6aChild.html">A Child</a>
+                <a href="7fromBeginningtoEnd.html">From Beginning to End</a>
+                <a href="8blankEyes.html">Blank Eyes</a>
+                <a href="9thatBird.html">That Bird</a>
+                <a href="10warmSnow.html">Warm Snow</a>
+                <a href="11totheGreatbeyond.html">To the Great beyond</a>
+                </div>
+
+                <div class="group">
+                <p class="groupTitle" href="lala">ACT TWO</p>
+                <a href="12aLetter.html">A Letter</a>
+                <a href="13littlePeace.html">Little Peace</a>
+                <a href="14pixell.html">Pi>Cell</a>
+                <a href="15selfPortraits.html">Self-portraits</a>
+                <a href="16thePrivileged.html">The Privileged</a>
+                <a href="17aMillionRoses.html">A Million Roses</a>
+                <a href="18iamalive.html">I Am Alive!</a>
+                <a href="19quizzes.html">Quizzes</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none;" id="content2" class="content">
+
+            <!-- <img class="imageContent" style="max-width:100%;margin-top:20vw;" src="3overture/1cem.jpg"> -->
+            <p class="textContent" style="margin-top:65vw;margin-bottom:20vw;">The person I met today said, it was sad to see a kindergarten kid tapping a key card at the entrance of an apartment without a security guard, pressing the password and entering the building alone. </p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">I thought of the sight I saw in the morning. </p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:100vw;">When I wore a VR headset,<br/> snow fell in the forest.</p>
+            <model-viewer
+                class="vrContent"
+                style="width:70vw;height:70vw;max-width:95%;"
+                src="10warmSnow/sno/qglmcrf01loh.gltf"
+                alt=""
+                shadow-intensity="1"
+                exposure=".7"
+                camera-controls
+                environment-image="4thebirth/bggradient2.jpg"
+                auto-rotate
+            ></model-viewer>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:300vw;">I rather thought the snow was warm.</p>
+            <img class="imageContent" style="padding-top:30vw;" src="10warmSnow/pia.jpg">
+            <p class="textContent" style="margin-top:100vw;margin-bottom:120vw;">I like the episode where Chroniko’s mother sells her memory on how to play the piano.</p>
+            <p class="textContent" style="margin-top:150vw;margin-bottom:120vw;">The episode is very gloomy but I like it because I see hope is still there, just like how Tetsuro heads to Andromeda galaxy to get a machine body.</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">It occurred to me.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">When that time comes, when we don’t care if everyone has a body or vice versa, when we can change our bodies…</p>
+            <p class="textContent" style="margin-top:320vw;margin-bottom:100vw;">Do I become one of ‘them’? Or do they become a part of ‘us’? </p>
+            <model-viewer
+                class="vrContent"
+                style="width:70vw;height:70vw;max-width:95%;"
+                src="10warmSnow/uni/jib8im9wq6mx.gltf"
+                alt=""
+                shadow-intensity="1"
+                exposure=".7"
+                camera-controls
+                environment-image="4thebirth/bggradient2.jpg"
+                auto-rotate
+            ></model-viewer>
+            <p class="textContent" style="margin-top:20vw;margin-bottom:120vw;">Do we all end up as one when I can choose to exist in a doll, in a child’s body, or in a computer? </p>
+            <p class="textContent" style="margin-top:400vw;margin-bottom:120vw;">Whatever happens, at least everything we care about right now becomes pointless. </p>
+            <p class="textContent" style="margin-top:400vw;margin-bottom:120vw;">It reminds me of the numerous clones of Maetel.</p>
+            <model-viewer
+                class="vrContent"
+                style="width:70vw;height:70vw;max-width:95%;"
+                src="10warmSnow/warmSnow.glb"
+                ios-src="10warmSnow/warmSnow.usdz"
+                alt=""
+                shadow-intensity="1"
+                exposure=".7"
+                camera-controls
+                environment-image="4thebirth/bggradient.jpg"
+                auto-rotate
+                ar
+            >
+                <input type="image" src="vr.png" slot="ar-button" style="border: none; position: absolute; bottom:3vw;right:2vw;"/>
+                <!-- </button> -->
+            </model-viewer>
+
+
+                <a href="11totheGreatbeyond.html" class="next">
+                    <img id="bars" style="padding-top:50vw;padding-bottom:10vw;" src="images/next.png">
+                </a>
+        </div>
+
+
+        <div>
+        </div>
+
+
+    </body>
+</html>

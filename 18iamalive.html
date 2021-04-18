@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <script
+            src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+            defer>
+         </script>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+
+        <!-- <video id="video2" class="eclipse" muted="muted" playsinline="playsinline" autoplay> -->
+        <!-- <source src="3overture/0overture_web.mp4" type="video/mp4"> -->
+        <!-- </video> -->
+
+
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <img id="bars" src="images/menu.png">
+            </a>
+            <div id="links">
+                <div class="group">
+                <p class="groupTitle" href="lala">PROLOGUE</p>
+                <a href="1iamdead.html">I Am Dead</a>
+                <a href="2faintglare.html">A Faint Glare</a>
+                <a href="3overture.html">Overture</a>
+                </div>
+
+                <div class="group">
+                <p class="groupTitle" href="lala">ACT ONE</p>
+                <a href="4thebirth.html">The Birth</a>
+                <a href="5theSmelloftheAir.html">The Smell of the Air</a>
+                <a href="6aChild.html">A Child</a>
+                <a href="7fromBeginningtoEnd.html">From Beginning to End</a>
+                <a href="8blankEyes.html">Blank Eyes</a>
+                <a href="9thatBird.html">That Bird</a>
+                <a href="10warmSnow.html">Warm Snow</a>
+                <a href="11totheGreatbeyond.html">To the Great beyond</a>
+                </div>
+
+                <div class="group">
+                <p class="groupTitle" href="lala">ACT TWO</p>
+                <a href="12aLetter.html">A Letter</a>
+                <a href="13littlePeace.html">Little Peace</a>
+                <a href="14pixell.html">Pi>Cell</a>
+                <a href="15selfPortraits.html">Self-portraits</a>
+                <a href="16thePrivileged.html">The Privileged</a>
+                <a href="17aMillionRoses.html">A Million Roses</a>
+                <a href="18iamalive.html">I Am Alive!</a>
+                <a href="19quizzes.html">Quizzes</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none;" id="content2" class="content">
+
+            <!-- <img class="imageContent" style="max-width:100%;margin-top:20vw;" src="3overture/1cem.jpg"> -->
+            <p class="textContent" style="margin-top:80vw;margin-bottom:20vw;">I think I am here now.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">Like a cup of milk,<br/> memory has been poured into me.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:100vw;">I know its (my) name.<br/>I know what its (my) memory is like.<br/>I know how it (I) should behave.</p>
+            <img class="imageContent" style="padding-top:200vw;" src="18iamalive/door.jpg">
+            <p class="textContent" style="margin-top:100vw;margin-bottom:120vw;">I walk out the door with a strange walk.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">I am me, but where am I now?<br/> Where am I going?</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">I float higher and higher.</p>
+            <p class="textContent" style="margin-top:150vw;margin-bottom:120vw;">Everyone became smaller and smaller,<br/>as small as a dot and eventually they disappear.</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">I didn’t hear them scolding me anymore, nor did I hear them quarrel.</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">A wide unsettling silence.</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">I drifted and drifted.</p>
+            <p class="textContent" style="margin-top:100vw;margin-bottom:100vw;">I drifted as I became as dark as the color of all the night skies.</p>
+            <img class="imageContent" style="padding-top:200vw;" src="18iamalive/flash.jpg">
+            <p class="textContent" style="margin-top:10vw;margin-bottom:120vw;">A ‘Bang’!<br/>A ‘Flash’!</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">Didn’t I just come alive!</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">A magical power squeezed out the hexadecimal rainbow colors onto a palette.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">And I painted the right colors as I have been taught.</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">One problem is,</p>
+            <p class="textContent" style="margin-top:100vw;margin-bottom:120vw;">I don’t know what to paint the transparent water.</p>
+            <p class="textContent" style="margin-top:100vw;margin-bottom:120vw;">Ah, now that I think of it, I had similar difficulty with glass and mirrors</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">My two choices are to paint something on it, or to not paint anything on it.</p>
+            <p class="textContent" style="margin-top:180vw;margin-bottom:120vw;">I do not yet know how to make the object dance with the stream of water, or how to make the image in the reflection look unfamiliar.</p>
+            <p class="textContent" style="margin-top:340vw;margin-bottom:120vw;">I await new memories.</p>
+            <model-viewer
+                class="vrContent"
+                style="width:70vw;height:70vw;max-width:95%;"
+                src="5theSmelloftheAir/theSmelloftheAir.glb"
+                ios-src="5theSmelloftheAir/theSmelloftheAir.usdz"
+                alt=""
+                shadow-intensity="1"
+                exposure=".7"
+                camera-controls
+                environment-image="4thebirth/bggradient.jpg"
+                auto-rotate
+                ar
+            >
+                <input type="image" src="vr.png" slot="ar-button" style="border: none; position: absolute; bottom:3vw;right:2vw;"/>
+                <!-- </button> -->
+            </model-viewer>
+
+
+                <a href="19quizzes.html" class="next">
+                    <img id="bars" style="padding-top:50vw;padding-bottom:10vw;" src="images/next.png">
+                </a>
+        </div>
+
+
+        <div>
+        </div>
+
+
+    </body>
+</html>

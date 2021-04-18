@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <script
+            src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+            defer>
+         </script>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+
+        <!-- <video id="video2" class="eclipse" muted="muted" playsinline="playsinline" autoplay> -->
+        <!-- <source src="3overture/0overture_web.mp4" type="video/mp4"> -->
+        <!-- </video> -->
+
+
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <img id="bars" src="images/menu.png">
+            </a>
+            <div id="links">
+                <div class="group">
+                <p class="groupTitle" href="lala">PROLOGUE</p>
+                <a href="1iamdead.html">I Am Dead</a>
+                <a href="2faintglare.html">A Faint Glare</a>
+                <a href="3overture.html">Overture</a>
+                </div>
+
+                <div class="group">
+                <p class="groupTitle" href="lala">ACT ONE</p>
+                <a href="4thebirth.html">The Birth</a>
+                <a href="5theSmelloftheAir.html">The Smell of the Air</a>
+                <a href="6aChild.html">A Child</a>
+                <a href="7fromBeginningtoEnd.html">From Beginning to End</a>
+                <a href="8blankEyes.html">Blank Eyes</a>
+                <a href="9thatBird.html">That Bird</a>
+                <a href="10warmSnow.html">Warm Snow</a>
+                <a href="11totheGreatbeyond.html">To the Great beyond</a>
+                </div>
+
+                <div class="group">
+                <p class="groupTitle" href="lala">ACT TWO</p>
+                <a href="12aLetter.html">A Letter</a>
+                <a href="13littlePeace.html">Little Peace</a>
+                <a href="14pixell.html">Pi>Cell</a>
+                <a href="15selfPortraits.html">Self-portraits</a>
+                <a href="16thePrivileged.html">The Privileged</a>
+                <a href="17aMillionRoses.html">A Million Roses</a>
+                <a href="18iamalive.html">I Am Alive!</a>
+                <a href="19quizzes.html">Quizzes</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none;" id="content2" class="content">
+
+            <!-- <img class="imageContent" style="max-width:100%;margin-top:20vw;" src="3overture/1cem.jpg"> -->
+            <p class="textContent" style="margin-top:80vw;margin-bottom:20vw;">They say it is blessed to know <br/>how to sleep, </p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:120vw;">but who can we be judged by when we worship immortality?</p>
+            <p class="textContent" style="margin-top:400vw;margin-bottom:120vw;">Truthfully, who can we judged by?</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:120vw;">To the great beyond…</p>
+            <model-viewer
+                class="vrContent"
+                style="width:70vw;height:70vw;max-width:95%;"
+                src="5theSmelloftheAir/theSmelloftheAir.glb"
+                ios-src="5theSmelloftheAir/theSmelloftheAir.usdz"
+                alt=""
+                shadow-intensity="1"
+                exposure=".7"
+                camera-controls
+                environment-image="4thebirth/bggradient.jpg"
+                auto-rotate
+                ar
+            >
+                <input type="image" src="vr.png" slot="ar-button" style="border: none; position: absolute; bottom:3vw;right:2vw;"/>
+                <!-- </button> -->
+            </model-viewer>
+
+
+                <a href="12aLetter.html" class="next">
+                    <img id="bars" style="padding-top:50vw;padding-bottom:10vw;" src="images/next.png">
+                </a>
+        </div>
+
+
+        <div>
+        </div>
+
+
+    </body>
+</html>
