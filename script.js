@@ -49,14 +49,14 @@ var isMobile = true;
 window.onload = function (){
     $(window).scroll(function() {
         $('video').each(function(){
-            if ($(this).is(':in-viewport(400)')) {
+            if ($(this).is(':in-viewport(10)')) {
                 $(this)[0].play();
             } else {
                 $(this)[0].pause();
             }
         });
         $('.chapterTitle').css({'text-decoration':'none'});
-        $('.chapter:in-viewport(100)').each(function(){
+        $('.chapter:in-viewport(950)').each(function(){
             let chpT = document.getElementById('T'+$(this)[0].id);
             chpT.style.textDecoration = 'underline';
         });
