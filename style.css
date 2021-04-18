@@ -37,10 +37,10 @@ body {
 .topnav a.chapterTitle {
     color: white;
     font-family: 'Dosis-ExtraLight', Aerial, sans-serif;
-    padding: 1.2vw;
-    padding-left: 5.0vw;
+    padding: 1.9vw;
+    padding-left: 4.0vw;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 1.5vh;
     display: block;
 }
 
@@ -48,10 +48,10 @@ body {
     color: white;
     margin: 0;
     font-family: 'Dosis-SemiBold', Aerial, sans-serif;
-    padding: 5.0vw;
+    padding: 4.0vw;
     padding-top: 1vw;
     text-decoration: none;
-    font-size: 5vw;
+    font-size: 3.5vw;
     display: block;
 }
 
@@ -68,7 +68,8 @@ body {
 
 .topnav .icon img{
     /* background-color: black; */
-    padding: 2vw;
+    padding: 3vw;
+    padding-top: 5vw;
     width:4vw;
     height:4vw;
 }
@@ -81,17 +82,16 @@ body {
 }
 
 .bars {
-    padding: 2.5vw;
-    /* padding-left: 1.5vw; */
-    height : 3vw;
-    width : 3vw;
+    padding: 5vw;
+    height : 2vw;
+    width : 2vw;
 }
 
 #soundBars {
-    padding: 1.5vw;
+    padding: 3vw;
     padding-left: 3.0vw;
-    height : 3vw;
-    width : 3vw;
+    height : 5vw;
+    width : 5vw;
 }
 
 .imageContent{
