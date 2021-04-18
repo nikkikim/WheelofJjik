@@ -49,7 +49,7 @@ var isMobile = true;
 window.onload = function (){
     $(window).scroll(function() {
         $('video').each(function(){
-            if ($(this).is(':in-viewport(10)')) {
+            if ($(this).is(':in-viewport(950)')) {
                 $(this)[0].play();
             } else {
                 $(this)[0].pause();
