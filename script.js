@@ -32,19 +32,19 @@ function toggleSound() {
         s.pause();
     }
 }
-var isMobile;
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    // true for mobile device
-    isMobile = true;
-    document.write("mobile device");
-    console.log("mobile");
-}else{
-    // false for not mobile device
-    isMobile = false;
-    console.log("not mobile");
-    document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
-    // window.stop();
-}
+var isMobile = true;
+// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+//     // true for mobile device
+//     isMobile = true;
+//     document.write("mobile device");
+//     console.log("mobile");
+// }else{
+//     // false for not mobile device
+//     isMobile = false;
+//     console.log("not mobile");
+//     document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
+//     // window.stop();
+// }
 
 
 window.onload = function (){
