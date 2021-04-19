@@ -1,5 +1,7 @@
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="isInViewport.min.js"></script>
         <script src="script.js"></script>
         <script
             src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
@@ -8,53 +10,53 @@
         <link rel="stylesheet" href="style.css">
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     </head>
+
     <body>
 
-        <video id="video2" class="eclipse" muted="muted" playsinline="playsinline" autoplay>
+        <video class="eclipse" id="video2" muted="muted" playsinline="playsinline" autoplay>
             <source src="1iamdead/0iamdead_webC.mp4" type="video/mp4">
         </video>
 
-        <!-- <div class="topnav">
-            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-                <img id="bars" src="images/menu.png">
-            </a>
-
-            <div id="links">
-                <div class="group">
-                <p class="groupTitle" href="lala">PROLOGUE</p>
-                <a href="1iAmDead.html">I Am Dead</a>
-                <a href="2faintglare.html">A Faint Glare</a>
-                <a href="3overture.html">Overture</a>
-                </div>
-
-                <div class="group">
-                <p class="groupTitle" href="lala">ACT ONE</p>
-                <a href="4thebirth.html">The Birth</a>
-                <a href="lala">The Smell of the Air</a>
-                <a href="lala">A Child</a>
-                <a href="lala">From Beginning to End</a>
-                <a href="lala">Blank Eyes</a>
-                <a href="lala">That Bird</a>
-                <a href="lala">Warm Snow</a>
-                <a href="lala">To the Great beyond</a>
-                </div>
-
-                <div class="group">
-                <p class="groupTitle" href="lala">ACT TWO</p>
-                <a href="lala">A Letter</a>
-                <a href="lala">Little Peace</a>
-                <a href="lala">Pi>Cell</a>
-                <a href="lala">Self-portraits</a>
-                <a href="lala">The Privileged</a>
-                <a href="lala">A Million Roses</a>
-                <a href="lala">A Am Alive!</a>
-                <a href="lala">Quizzes</a>
+        <div id="contents" >
+            <audio id="bgm" loop>
+                <source src="bgm.mp3" type="audio/mp3">
+            </audio>
+            <div class="topnav" id="slider">
+                <a href="javascript:void(0);" class="icon" id="icon" onclick="toggleMenu()">
+                    <img class="bars" id="menuBars" src="images/menu.png">
+                </a>
+                <a href="javascript:void(0);" class="icon" id="soundIcon" onclick="toggleSound()">
+                    <img class="bars" id="soundBars" src="images/soundOff.png">
+                </a>
+                <!-- <a href="" class="active">l</a> -->
+                <div id="links">
+                    <div class="group">
+                    <p class="groupTitle" href="lala">Wheel of Jjik</p>
+                    <a class="chapterTitle" id="T1iamdead" href="#1iamdead">I Am Dead</a>
+                    <a class="chapterTitle" id="T2faintglare" href="#2faintglare">A Faint Glare</a>
+                    <a class="chapterTitle" id="T3overture" href="#3overture">Overture</a>
+                    <a class="chapterTitle" id="T4thebirth" href="#4thebirth">The Birth</a>
+                    <a class="chapterTitle" id="T5theSmelloftheAir" href="#5theSmelloftheAir">The Smell of the Air</a>
+                    <a class="chapterTitle" id="T6aChild" href="#6aChild">A Child</a>
+                    <a class="chapterTitle" id="T7fromBeginningtoEnd" href="#7fromBeginningtoEnd">From Beginning to End</a>
+                    <a class="chapterTitle" id="T8blankEyes" href="#8blankEyes">Blank Eyes</a>
+                    <a class="chapterTitle" id="T9thatBird" href="#9thatBird">That Bird</a>
+                    <a class="chapterTitle" id="T10warmSnow" href="#10warmSnow">Warm Snow</a>
+                    <a class="chapterTitle" id="T11totheGreatbeyond" href="#11totheGreatbeyond">To the Great beyond</a>
+                    <a class="chapterTitle" id="T12aLetter" href="#12aLetter">A Letter</a>
+                    <a class="chapterTitle" id="T13littlePeace" href="#13littlePeace">Little Peace</a>
+                    <a class="chapterTitle" id="T14pixell" href="#14pixell">Pi>Cell</a>
+                    <a class="chapterTitle" id="T15selfPortraits" href="#15selfPortraits">Self-portraits</a>
+                    <a class="chapterTitle" id="T16thePrivileged" href="#16thePrivileged">The Privileged</a>
+                    <a class="chapterTitle" id="T17aMillionRoses" href="#17aMillionRoses">A Million Roses</a>
+                    <a class="chapterTitle" id="T18iamalive" href="#18iamalive">I Am Alive!</a>
+                    <a class="chapterTitle" id="T19quizzes" href="#19quizzes">Quizzes</a>
+                    </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <div style="display:none;" id="content2" class="content">
-
+        <div id="content2" class="content">
             <!-- <img class="imageContent" style="max-width:100%;padding-top:30vw;padding-bottom:50vw;" src="images/eclipse.jpg"> -->
             <!-- <div class="viddiv" style="height:80vw;">
                 <video id="video2" class="imageContent" style="max-width: 100%;" muted="muted" playsinline="playsinline" loop>
@@ -65,11 +67,11 @@
 
 
 
-            <p class="textContent" style="margin-top:80vw;margin-bottom:500;">"I am dead!"</p>
             <div class="chapter" id="1iamdead">
-                <p class="textContent"></p>
+                <p class="textContent" id="empty" style="margin-bottom:600vw"></p>
                 <model-viewer
                     class="vrContent"
+                    loading="eager"
                     style="width:70vw;height:70vw;max-width:95%;"
                     src="1iamdead/1ratgltf/1rat.gltf"
                     alt=""
@@ -80,8 +82,9 @@
                     auto-rotate
                 ></model-viewer>
                 <!-- <img class="imageContent" src="1iamdead/1rat.jpg"> -->
-                <p class="textContent" style="margin-top:10vw;margin-bottom:50vw;">I thought I heard the voice of a rat.</p>
-                <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">The rat was alive, <br/>but it looked as if it’s dead.</p>
+                <p class="textContent" style="margin-top:0.1vw;">"I am dead!"</p>
+                <p class="textContent" style="margin-top:150vw;margin-bottom:150vw;">I thought I heard the voice of a rat.</p>
+                <p class="textContent" style="margin-top:50vw;margin-bottom:50vw;">The rat was alive, <br/>but it looked as if it’s dead.</p>
                 <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">1. “Do people live here?” I asked my mom the day I saw a rat in the basement.</p>
                 <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">2. The white rat in the laboratory is a life simulation.</p>
                 <p class="textContent" style="margin-top:80vw;margin-bottom:50vw;">3. Mouse is a mouse.</p>
@@ -127,6 +130,7 @@
                 <model-viewer
                     class="vrContent"
                     style="width:70vw;height:70vw;max-width:95%;"
+                    loading="eager"
                     src="2faintglare/vxmpr2pt3oyn/vxmpr2pt3oyn.gltf"
                     alt=""
                     shadow-intensity="1"
@@ -168,6 +172,7 @@
 
                 <model-viewer
                     class="vrContent"
+                    loading="eager"
                     style="width:70vw;height:70vw;max-width:95%;"
                     src="3overture/1cemgltf/1cem.gltf"
                     alt=""
@@ -218,6 +223,7 @@
             <div class="chapter" id="4thebirth">
             <model-viewer
                 class="vrContent"
+                loading="eager"
                 style="width:70vw;height:70vw;max-width:95%;"
                 src="4thebirth/5evia4wcbb5v/5evia4wcbb5v.gltf"
                 ios-src="4thebirth/theBirth.usdz"
@@ -248,6 +254,7 @@
             <p class="textContent" style="margin-top:100vw;">A blurry sight of life,<br/> a near-infinite world.</p>
             <model-viewer
                 class="vrContent"
+                loading="eager"
                 style="width:70vw;height:70vw;max-width:95%;"
                 src="5theSmelloftheAir/h91fwxyg15o8/h91fwxyg15o8.gltf"
                 alt=""
@@ -276,6 +283,7 @@
                 <p class="textContent" style="margin-top:100vw;margin-bottom:40vw;">I have very many names.</p>
             <model-viewer
                 class="vrContent"
+                loading="eager"
                 style="width:50vw;height:50vw;max-width:75%;"
                 src="6aChild/2vrb1x0an7fz/2vrb1x0an7fz.gltf"
                 alt=""
@@ -906,7 +914,6 @@
             </div>
 
         </div>
-
 
 
 
