@@ -46,24 +46,9 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     // window.stop();
 }
 
-
 window.onload = function (){
     if (isMobile){
         console.log("ismobile");
-        $(window).scroll(function() {
-            $('video').each(function(){
-                if ($(this).is(':in-viewport(950)')) {
-                    $(this)[0].play();
-                } else {
-                    $(this)[0].pause();
-                }
-            });
-            $('.chapterTitle').css({'text-decoration':'none'});
-            $('.chapter:in-viewport(950)').each(function(){
-                let chpT = document.getElementById('T'+$(this)[0].id);
-                chpT.style.textDecoration = 'underline';
-            });
-        });
         let container = document.getElementById('content2');
         let slider = document.getElementById('slider');
         document.addEventListener('click', function( event ) {
@@ -80,17 +65,39 @@ window.onload = function (){
 
         if (document.getElementById('video2') != undefined){
             document.getElementById('video2').addEventListener('ended', videoHandler, false);
+            window.onscroll = function () { window.scrollTo(0, 0); };
 
         } else {
             document.getElementById('content2').style.display = 'block';
         }
     } else {
+        document.getElementById('video2').style.display = 'none';
         document.getElementById('contents').style.display = 'none';
         document.getElementById('content2').style.display = 'none';
     }
 };
 function videoHandler(e) {
     // What you want to do after the event
-    document.getElementById('content2').style.display = 'block';
-    document.getElementById('video2').style.display = 'none';
+    document.getElementById('video2').remove();
+    document.getElementById('empty').remove();
+    window.onscroll = function () {};
+    $(window).scroll(function() {
+        $('video').each(function(){
+            if ($(this)[0].id === 'video2'){
+                return;
+            }
+            if ($(this).is(':in-viewport(100)')) {
+                $(this)[0].play();
+            } else {
+                $(this)[0].pause();
+            }
+        });
+        $('.chapterTitle').css({'text-decoration':'none'});
+        $('.chapter:in-viewport(950)').each(function(){
+            let chpT = document.getElementById('T'+$(this)[0].id);
+            chpT.style.textDecoration = 'underline';
+        });
+    });
+    // document.getElementById('content2').style.display = 'block';
+    // document.getElementById('video2').style.display = 'none';
 }
