@@ -78,26 +78,26 @@ window.onload = function (){
 };
 function videoHandler(e) {
 
-    // document.getElementById('video2').remove();
-    // document.getElementById('empty').remove();
-    // window.onscroll = function () {};
-    // $(window).scroll(function() {
-    //     $('video').each(function(){
-    //         if ($(this)[0].id === 'video2'){
-    //             return;
-    //         }
-    //         if ($(this).is(':in-viewport(100)')) {
-    //             $(this)[0].play();
-    //         } else {
-    //             $(this)[0].pause();
-    //         }
-    //     });
-    //     $('.chapterTitle').css({'text-decoration':'none'});
-    //     $('.chapter:in-viewport(950)').each(function(){
-    //         let chpT = document.getElementById('T'+$(this)[0].id);
-    //         chpT.style.textDecoration = 'underline';
-    //     });
-    // });
-    document.getElementById('content2').style.display = 'block';
-    document.getElementById('video2').style.display = 'none';
+    document.getElementById('video2').remove();
+    document.getElementById('empty').remove();
+    window.onscroll = function () {};
+    $(window).scroll(function() {
+        $('video').each(function(){
+            if ($(this)[0].id === 'video2'){
+                return;
+            }
+            if ($(this).is(':in-viewport(100)')) {
+                $(this)[0].play();
+            } else {
+                $(this)[0].pause();
+            }
+        });
+        $('.chapterTitle').css({'text-decoration':'none'});
+        $('.chapter:in-viewport(950)').each(function(){
+            let chpT = document.getElementById('T'+$(this)[0].id);
+            chpT.style.textDecoration = 'underline';
+        });
+    });
+    // document.getElementById('content2').style.display = 'block';
+    // document.getElementById('video2').style.display = 'none';
 }
