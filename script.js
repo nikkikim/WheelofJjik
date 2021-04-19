@@ -77,7 +77,7 @@ window.onload = function (){
     }
 };
 function videoHandler(e) {
-
+    // What you want to do after the event
     document.getElementById('video2').remove();
     document.getElementById('empty').remove();
     window.onscroll = function () {};
