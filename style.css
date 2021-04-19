@@ -1,9 +1,11 @@
 body {
     background-color : black;
+    margin: 0;
 }
 
 .eclipse {
     position: absolute;
+    background-color: black;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -14,28 +16,32 @@ body {
 
 .topnav {
     overflow: hidden;
-    /* background-color: #333; */
+    margin: 0;
     position: fixed;
     top: 0;
+    left: 0;
     z-index:2;
 }
 
 .topnav #links {
     display: none;
-    background-color: black;
-    padding: 2vh;
-    padding-top: 6vh;
-    top:0;
+    background-color: #22222288;
+    padding: 2vw;
+    padding-left: 4.3vw;
+    padding-top: 0vw;
+    padding-bottom: 50vw;
+    /* top:0; */
+    /* left: 0; */
     z-index:2;
 }
 
-.topnav a {
+.topnav a.chapterTitle {
     color: white;
-    background-color: black;
     font-family: 'Dosis-ExtraLight', Aerial, sans-serif;
-    padding: 0.1vh;
+    padding: 1.9vw;
+    padding-left: 4.0vw;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 1.5vh;
     display: block;
 }
 
@@ -43,9 +49,10 @@ body {
     color: white;
     margin: 0;
     font-family: 'Dosis-SemiBold', Aerial, sans-serif;
-    padding: 0.1vh;
+    padding: 4.0vw;
+    padding-top: 1vw;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 3.5vw;
     display: block;
 }
 
@@ -54,11 +61,18 @@ body {
 }
 
 .topnav .icon {
-    background: black;
     display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
+    /* position: fixed; */
+    /* left: 0; */
+    /* top: 0; */
+}
+
+.topnav .icon img{
+    /* background-color: black; */
+    padding: 3vw;
+    padding-top: 5vw;
+    width:4vw;
+    height:4vw;
 }
 
 .next {
@@ -68,23 +82,17 @@ body {
     clear: right;
 }
 
-.topnav a:hover {
-    /* background-color: #ddd; */
-    /* height : 25px; */
-    /* background-color: green; */
-    /* color: black; */
+.bars {
+    padding: 5vw;
+    height : 2vw;
+    width : 2vw;
 }
 
-/* .active { */
-/*     background-color: #4CAF50; */
-/*     color: white; */
-/* } */
-
-#bars {
-    padding: 2vh;
-    padding-left: 1.5vh;
-    height : 2vh;
-    width : 2vh;
+#soundBars {
+    padding: 3vw;
+    padding-left: 3.0vw;
+    height : 5vw;
+    width : 5vw;
 }
 
 .imageContent{
@@ -99,7 +107,8 @@ body {
 }
 
 .vrContent{
-    display: relative;
+    /* display: relative; */
+    display: block;
     max-height: 100%;
     max-width: 70%;
     margin-left: auto;
@@ -126,24 +135,52 @@ body {
 
 model-viewer{
     --poster-color: #00000000;
-    z-index: 0;
+    z-index: 1;
 }
-/* model-viewer{ */
-/*     background-color: #000000; */
-/*     --poster-color: #00000000; */
-/*     --poster-image: url('bl.jpg'); */
-/* } */
 
-/* model-viewer#reveal { */
-/*     --poster-color: #ff00ff; */
-/* } */
+#video2 {
+    z-index:2;
+}
 
-/*
-  This will hide the focus indicator if the element receives focus via the mouse,
-  but it will still show up on keyboard focus.
-*/
 .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
+}
+
+#slider{
+    /* position: absolute; */
+    /* width: 100px; */
+    /* height: 100px; */
+    width: fit-content;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+    animation: slide-in 1.5s forwards;
+    -webkit-animation: slide-in 1.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 1.5s forwards;
+    -webkit-animation: slide-out 1.5s forwards;
+}
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
 }
 
 @font-face {

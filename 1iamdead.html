@@ -1,7 +1,12 @@
 <html>
     <head>
         <script src="script.js"></script>
+        <script
+            src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+            defer>
+         </script>
         <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     </head>
     <body>
 
@@ -13,11 +18,11 @@
             <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
                 <img id="bars" src="images/menu.png">
             </a>
-            <!-- <a href="" class="active">l</a> -->
+
             <div id="links">
                 <div class="group">
                 <p class="groupTitle" href="lala">PROLOGUE</p>
-                <a href="1iAmDead.html">I Am Dead</a>
+                <a href="1iamdead.html">I Am Dead</a>
                 <a href="2faintglare.html">A Faint Glare</a>
                 <a href="3overture.html">Overture</a>
                 </div>
@@ -25,50 +30,77 @@
                 <div class="group">
                 <p class="groupTitle" href="lala">ACT ONE</p>
                 <a href="4thebirth.html">The Birth</a>
-                <a href="lala">The Smell of the Air</a>
-                <a href="lala">A Child</a>
-                <a href="lala">From Beginning to End</a>
-                <a href="lala">Blank Eyes</a>
-                <a href="lala">That Bird</a>
-                <a href="lala">Warm Snow</a>
-                <a href="lala">To the Great beyond</a>
+                <a href="5theSmelloftheAir.html">The Smell of the Air</a>
+                <a href="6aChild.html">A Child</a>
+                <a href="7fromBeginningtoEnd.html">From Beginning to End</a>
+                <a href="8blankEyes.html">Blank Eyes</a>
+                <a href="9thatBird.html">That Bird</a>
+                <a href="10warmSnow.html">Warm Snow</a>
+                <a href="11totheGreatbeyond.html">To the Great beyond</a>
                 </div>
 
                 <div class="group">
                 <p class="groupTitle" href="lala">ACT TWO</p>
-                <a href="lala">A Letter</a>
-                <a href="lala">Little Peace</a>
-                <a href="lala">Pi>Cell</a>
-                <a href="lala">Self-portraits</a>
-                <a href="lala">The Privileged</a>
-                <a href="lala">A Million Roses</a>
-                <a href="lala">A Am Alive!</a>
-                <a href="lala">Quizzes</a>
+                <a href="12aLetter.html">A Letter</a>
+                <a href="13littlePeace.html">Little Peace</a>
+                <a href="14pixell.html">Pi>Cell</a>
+                <a href="15selfPortraits.html">Self-portraits</a>
+                <a href="16thePrivileged.html">The Privileged</a>
+                <a href="17aMillionRoses.html">A Million Roses</a>
+                <a href="18iamalive.html">I Am Alive!</a>
+                <a href="19quizzes.html">Quizzes</a>
                 </div>
             </div>
         </div>
 
         <div style="display:none;" id="content2" class="content">
 
-            <img class="imageContent" src="1iamdead/1rat.jpg">
-            <p class="textContent">I am dead</p>
-            <img class="imageContent" style="padding-top:600vw;padding-bottom:400vw;" src="1iamdead/2lab.jpg">
-            <p class="textContent">In the human world.</p>
-            <img class="imageContent" style="padding-top:200vw;padding-bottom:150vw;" src="1iamdead/3hole.jpg">
-            <p class="textContent">I lived to deal with the mistakes that humans dropped in the sewers,</p>
-            <img class="imageContent" style="padding-top:300vw;padding-bottom:200vw;" src="1iamdead/4wired.jpg">
-            <p class="textContent">And now I am tasked with watching and caring for virtual beings in the wired world.</p>
-            <img class="imageContent" style="padding-top:300vw;padding-bottom:200vw;" src="1iamdead/5beings.jpg">
-            <p class="textContent">Here lie 16 tales.</p>
-            <img class="imageContent" style="max-width:60%;padding-top:100vw;padding-bottom:400vw;" src="1iamdead/6wheel.jpg">
+            <model-viewer
+                class="vrContent"
+                style="width:70vw;height:70vw;max-width:95%;"
+                src="1iamdead/1ratgltf/1rat.gltf"
+                alt=""
+                shadow-intensity="1"
+                exposure=".7"
+                camera-controls
+                environment-image="4thebirth/bggradient.jpg"
+                auto-rotate
+            ></model-viewer>
+            <!-- <img class="imageContent" src="1iamdead/1rat.jpg"> -->
+            <p class="textContent">"I am dead"</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">I thought I heard the voice of a rat.</p>
+            <p class="textContent" style="margin-top:150vw;margin-bottom:50vw;">The rat was alive, <br/>but it looked as if it’s dead.</p>
+            <p class="textContent" style="margin-top:400vw;margin-bottom:50vw;">1. “Do people live here?” I asked my mom the day I saw a rat in the basement.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">2. The white rat in the laboratory is a life simulation.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">3. Mouse is a mouse.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">4. Rat brings you water.</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:50vw;">A rat is semi-existant.</p>
+             <p class="textContent" style="margin-top:400vw;margin-bottom:50vw;">‘Jjik’ means squeak.</p>
+            <p class="textContent" style="margin-top:180vw;margin-bottom:50vw;">There is a saying that goes ‘can’t say Jjik even if you are stepped on’</p>
+            <p class="textContent" style="margin-top:270vw;margin-bottom:50vw;">Do those that live in basements know about the countless number of feet that are stepping on their heads?</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">Do those doing the stepping know that there is someone beneath their feet?</p>
+            <img class="imageContent" style="padding-top:200vw;padding-bottom:50vw;" src="1iamdead/2lab.jpg">
+            <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">Unrealistic perception and scattered memories present to me a mixture of reality and the virtual.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">The rat says: <br/>"In the human world, I lived to deal with the mistakes that humans dropped in the sewers."</p>
+            <img class="imageContent" style="padding-top:100vw;padding-bottom:50vw;" src="1iamdead/3hole.jpg">
+            <p class="textContent" style="margin-top:100vw;margin-bottom:50vw;">"And now I am tasked with watching and caring for virtual beings in the wired world."</p>
+            <p class="textContent" style="margin-top:300vw;margin-bottom:50vw;">I imagine the virtual beings living in an in-between space under the water.</p>
+            <p class="textContent" style="margin-top:160vw;margin-bottom:50vw;">Our reflection in the undulating water look distorted because they are also ever so slightly reflected.</p>
+            <p class="textContent" style="margin-top:380vw;margin-bottom:50vw;">I have seen the empty eyes of my avatar.</p>
+            <p class="textContent" style="margin-top:200vw;margin-bottom:50vw;">They were the eyes of a laborer working like a machine.</p>
+            <img class="imageContent" style="padding-top:150vw;padding-bottom:50vw;" src="1iamdead/4wired.jpg">
+            <p class="textContent" style="padding-top:200vw;padding-bottom:50vw;"> I think about some stories <br/>again and again.</p>
+            <p class="textContent" style="padding-top:100vw;padding-bottom:50vw;"> I am me. <br/> I am you. <br/> I am flat. <br/><br/> Then I sometimes disappear.</p>
+            <img class="imageContent" style="padding-top:250vw;padding-bottom:200vw;" src="1iamdead/5beings.jpg">
+            <p class="textContent">I repeat. <br/>The world repeats. <br/>And the stories that repeat repeats.</p>
+            <img class="imageContent" style="max-width:60%;padding-top:150vw;padding-bottom:150vw;" src="1iamdead/6wheel.jpg">
             <p class="textContent">I pass them by going round and round on a treadmill but woe is me for this wheel is forever inescapable.</p>
+            <p class="textContent" style="padding-top:150vw;padding-bottom:50vw;"> Like a hamster in a hamster wheel.</p>
 
             <a href="2faintglare.html" class="next">
-                <img id="bars" style="padding-top:100vw;padding-bottom:10vw;" src="images/next.png">
+                <img id="bars" style="padding-top:50vw;padding-bottom:10vw;" src="images/next.png">
             </a>
         </div>
-
-
 
 
     </body>
