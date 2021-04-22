@@ -3,6 +3,27 @@ body {
     margin: 0;
 }
 
+.hide-scroll {
+    overflow: hidden;
+}
+
+.viewport {
+    overflow: auto;
+
+    /* Make sure the inner div is not larger than the container
+     * so that we have room to scroll.
+     */
+    max-height: 100%;
+
+    /* Pick an arbitrary margin/padding that should be bigger
+     * than the max scrollbar width across the devices that 
+     * you are supporting.
+     * padding = -margin
+     */
+    margin-right: -100px;
+    padding-right: 100px;
+}
+
 .eclipse {
     position: absolute;
     background-color: black;
