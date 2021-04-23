@@ -1,0 +1,215 @@
+body {
+    background-color : black;
+    margin: 0;
+}
+
+.hide-scroll {
+    overflow: hidden;
+}
+
+.viewport {
+    overflow: auto;
+
+    /* Make sure the inner div is not larger than the container
+     * so that we have room to scroll.
+     */
+    max-height: 100%;
+
+    /* Pick an arbitrary margin/padding that should be bigger
+     * than the max scrollbar width across the devices that 
+     * you are supporting.
+     * padding = -margin
+     */
+    margin-right: -100px;
+    padding-right: 100px;
+}
+
+.eclipse {
+    position: absolute;
+    background-color: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+    magrin: 0 auto;
+}
+
+.topnav {
+    overflow: hidden;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:2;
+}
+
+.topnav #links {
+    display: none;
+    background-color: #22222288;
+    padding: 2vw;
+    padding-left: 4.3vw;
+    padding-top: 0vw;
+    padding-bottom: 50vw;
+    /* top:0; */
+    /* left: 0; */
+    z-index:2;
+}
+
+.topnav a.chapterTitle {
+    color: white;
+    font-family: 'Dosis-ExtraLight', Aerial, sans-serif;
+    padding: 1.9vw;
+    padding-left: 4.0vw;
+    text-decoration: none;
+    font-size: 1.5vh;
+    display: block;
+}
+
+.topnav .groupTitle{
+    color: white;
+    margin: 0;
+    font-family: 'Dosis-SemiBold', Aerial, sans-serif;
+    padding: 4.0vw;
+    padding-top: 1vw;
+    text-decoration: none;
+    font-size: 3.5vw;
+    display: block;
+}
+
+.topnav div.group{
+    padding: 1vh;
+}
+
+.topnav .icon {
+    display: block;
+    /* position: fixed; */
+    /* left: 0; */
+    /* top: 0; */
+}
+
+.topnav .icon img{
+    /* background-color: black; */
+    padding: 3vw;
+    padding-top: 5vw;
+    width:4vw;
+    height:4vw;
+}
+
+.next {
+    background: black;
+    display: block;
+    float: right;
+    clear: right;
+}
+
+.bars {
+    padding: 5vw;
+    height : 2vw;
+    width : 2vw;
+}
+
+#soundBars {
+    padding: 3vw;
+    padding-left: 3.0vw;
+    height : 5vw;
+    width : 5vw;
+}
+
+.imageContent{
+    display: block;
+    max-height: 100%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40vw;
+    padding-bottom: 40vw;
+    border: 0px;
+}
+
+.vrContent{
+    /* display: relative; */
+    display: block;
+    max-height: 100%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40vw;
+    padding-bottom: 40vw;
+    border: 0px;
+}
+
+.textContent {
+    color: white;
+    font-family: 'Dosis-ExtraLight', Aerial, sans-serif;
+    text-align: center;
+    display: block;
+    max-height: 100%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 2.5vh;
+    border: 0px;
+}
+
+model-viewer{
+    --poster-color: #00000000;
+    z-index: 1;
+}
+
+#video2 {
+    z-index:2;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
+
+#slider{
+    /* position: absolute; */
+    /* width: 100px; */
+    /* height: 100px; */
+    width: fit-content;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+    animation: slide-in 1.5s forwards;
+    -webkit-animation: slide-in 1.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 1.5s forwards;
+    -webkit-animation: slide-out 1.5s forwards;
+}
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+
+@font-face {
+    font-family: Dosis-ExtraLight;
+    src: url("fonts/Dosis-ExtraLight.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: Dosis-SemiBold;
+    src: url("fonts/Dosis-SemiBold.ttf") format('truetype');
+}
