@@ -1,0 +1,123 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.0.639693989)"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 75526,
+            "type": "VEC3",
+            "max": [
+                59.223854064941409,
+                -18.05081558227539,
+                -46.851131439208987
+            ],
+            "min": [
+                -61.093841552734378,
+                -62.382659912109378,
+                -77.70409393310547
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 75526,
+            "type": "VEC3",
+            "max": [
+                0.9999886155128479,
+                0.9999011754989624,
+                0.9999338984489441
+            ],
+            "min": [
+                -0.9999885559082031,
+                -0.9976476430892944,
+                -0.9997272491455078
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 75526,
+            "type": "VEC4",
+            "max": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 3021040,
+            "uri": "dgzfrvhq7ebj.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 906312,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 906312,
+            "byteLength": 906312,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1812624,
+            "byteLength": 1208416,
+            "target": 34962
+        }
+    ],
+    "materials": [
+        {
+            "name": "material",
+            "pbrMetallicRoughness": {
+                "metallicFactor": 0.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "mode": 0,
+                    "material": 0,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "COLOR_0": 2
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}
