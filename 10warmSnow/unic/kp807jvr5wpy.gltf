@@ -8,41 +8,41 @@
             "bufferView": 0,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 10250,
+            "count": 40878,
             "type": "VEC3",
             "max": [
                 54.59209442138672,
-                -9.21927261352539,
-                -76.22822570800781
+                -9.13241958618164,
+                -75.91694641113281
             ],
             "min": [
-                -32.19361877441406,
-                -137.80409240722657,
-                -167.1661376953125
+                -32.423484802246097,
+                -140.1102294921875,
+                -167.85336303710938
             ]
         },
         {
             "bufferView": 1,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 10250,
+            "count": 40878,
             "type": "VEC3",
             "max": [
-                0.9849684238433838,
+                0.9990223050117493,
                 0.9999343156814575,
                 0.9999221563339233
             ],
             "min": [
-                -0.9998562335968018,
-                -0.9754675626754761,
-                -0.8031936287879944
+                -0.9999966025352478,
+                -0.9977630972862244,
+                -0.9163594245910645
             ]
         },
         {
             "bufferView": 2,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 10250,
+            "count": 40878,
             "type": "VEC4",
             "max": [
                 1.0,
@@ -60,27 +60,27 @@
     ],
     "buffers": [
         {
-            "byteLength": 410000,
-            "uri": "4kj9qy0qzn3o.bin"
+            "byteLength": 1635120,
+            "uri": "kp807jvr5wpy.bin"
         }
     ],
     "bufferViews": [
         {
             "buffer": 0,
             "byteOffset": 0,
-            "byteLength": 123000,
+            "byteLength": 490536,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteOffset": 123000,
-            "byteLength": 123000,
+            "byteOffset": 490536,
+            "byteLength": 490536,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteOffset": 246000,
-            "byteLength": 164000,
+            "byteOffset": 981072,
+            "byteLength": 654048,
             "target": 34962
         }
     ],
