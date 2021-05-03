@@ -148,10 +148,21 @@ body {
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-top: 2vw;
     padding-bottom: 2vw;
     font-size: 2.5vh;
     border: 0px;
+}
+
+.chapter{
+    background-image: linear-gradient(black, #888888);
+}
+
+.chapterpad{
+    background-image: linear-gradient(#888888, black);
+    padding-top: 40vw;
 }
 
 model-viewer{
@@ -184,6 +195,11 @@ model-viewer{
 .slide-out {
     animation: slide-out 1.5s forwards;
     -webkit-animation: slide-out 1.5s forwards;
+}
+
+#startviddiv {
+    min-height: 100%;
+    margin: 0;
 }
 
 @keyframes slide-in {
