@@ -150,7 +150,6 @@ function videoHandler(e) {
             chpT.style.textDecoration = 'underline';
         });
     });
-    console.log(window);
     // document.getElementById('content2').style.display = 'block';
     // document.getElementById('video2').style.display = 'none';
 }

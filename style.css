@@ -1,29 +1,5 @@
 body {
     background-color : black;
-    background-image: linear-gradient(#000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #000000,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff,
-                                      #ffffff);
     margin: 0;
 }
 
@@ -186,7 +162,7 @@ body {
 
 .chapterpad{
     background-image: linear-gradient(#1a1a1a, black);
-    padding-top: 40vw;
+    padding-top: 90vw;
 }
 
 .chapterpad2{
