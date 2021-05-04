@@ -167,7 +167,7 @@ body {
 
 .chapterpad2{
     background-image: linear-gradient(#1a1a1a, #ffffff);
-    padding-top: 3000vw;
+    /*padding-top: 3000vw;*/
 }
 
 model-viewer{
