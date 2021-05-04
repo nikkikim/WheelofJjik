@@ -177,6 +177,12 @@ body {
     padding-bottom: 5000vw;
 }
 
+.chapterpad4{
+    background-image: linear-gradient(#ffffff, black);
+    /*padding-top: 3000vw;*/
+    padding-top: 90000;
+}
+
 model-viewer{
     --poster-color: #00000000;
     z-index: 1;
