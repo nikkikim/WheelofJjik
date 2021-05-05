@@ -89,6 +89,14 @@ function isClickBackground(event){
     return true;
 }
 
+var doc;
+var context;
+var clones;
+var disableScroll;
+var scrollHeight;
+var scrollPos;
+var clonesHeight;
+var i;
 
 window.onload = function (){
     if (isMobile){
@@ -115,6 +123,17 @@ window.onload = function (){
         } else {
             document.getElementById('content2').style.display = 'block';
         }
+        doc = window.document;
+        context = doc.querySelector('.js-loop');
+        clones = context.querySelectorAll('.is-clone');
+        console.log(clones);
+        disableScroll = false;
+        scrollHeight = 0;
+        scrollPos = 0;
+        clonesHeight = 0;
+        i = 0;
+        init();
+
     } else {
         // document.getElementById('video2').style.display = 'none';
         // document.getElementById('contents').style.display = 'none';
@@ -145,11 +164,89 @@ function videoHandler(e) {
             }
         });
         $('.chapterTitle').css({'text-decoration':'none'});
-        $('.chapter:in-viewport(950)').each(function(){
-            let chpT = document.getElementById('T'+$(this)[0].id);
-            chpT.style.textDecoration = 'underline';
-        });
+        // $('.chapter:in-viewport(950)').each(function(){
+        //     let chpT = document.getElementById('T'+$(this)[0].id);
+        //     chpT.style.textDecoration = 'underline';
+        // });
+        reCalc();
+        window.requestAnimationFrame(scrollUpdate);
     });
     // document.getElementById('content2').style.display = 'block';
     // document.getElementById('video2').style.display = 'none';
 }
+
+function getScrollPos () {
+    // return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
+    return window.pageYOffset;
+}
+
+function setScrollPos (pos) {
+    console.log("SETTTTTT");
+    // context.scrollTop = pos;
+    document.body.scrollTop = pos;
+}
+
+function getClonesHeight () {
+    clonesHeight = 0;
+
+    for (i = 0; i < clones.length; i += 1) {
+        console.log("clones");
+        console.log(clones[0]);
+        clonesHeight = clonesHeight + clones[i].offsetHeight;
+    }
+
+    return clonesHeight;
+}
+
+function reCalc () {
+    console.log("reeecalllcl");
+    scrollHeight = context.scrollHeight;
+    clonesHeight = getClonesHeight();
+
+    if (scrollPos <= 0) {
+        setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+    }
+}
+
+function scrollUpdate () {
+  if (!disableScroll) {
+      scrollPos = getScrollPos();
+      console.log(scrollPos);
+      console.log(clonesHeight);
+
+      if (clonesHeight + scrollPos >= scrollHeight) {
+          // Scroll to the top when you’ve reached the bottom
+          setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+          disableScroll = true;
+      } else if (scrollPos <= 0) {
+          // Scroll to the bottom when you reach the top
+          setScrollPos(scrollHeight - clonesHeight);
+          disableScroll = true;
+    }
+  }
+
+  if (disableScroll) {
+    // Disable scroll-jumping for a short time to avoid flickering
+    window.setTimeout(function () {
+      disableScroll = false;
+    }, 40);
+  }
+}
+
+function init () {
+  reCalc();
+  // context.addEventListener('scroll', function () {
+  //     console.log("hahahah");
+  //   window.requestAnimationFrame(scrollUpdate);
+  // }, false);
+
+  window.addEventListener('resize', function () {
+    window.requestAnimationFrame(reCalc);
+  }, false);
+}
+
+// if (document.readyState !== 'loading') {
+//     init();
+// } else {
+//     doc.addEventListener('DOMContentLoaded', init, false);
+// }

@@ -14,8 +14,8 @@
 
         <div id="startviddiv">
             <video id="video2" class="eclipse" muted="muted" playsinline="playsinline" autoplay>
-                <source src="1iamdead/0iamdead_webC.mp4" type="video/mp4">
-                    
+                <!-- <source src="1iamdead/0iamdead_webC.mp4" type="video/mp4"> -->
+                <source src="dummy.mp4" type="video/mp4">
             </video>
         </div>
 <div class="hide-scroll">
@@ -57,8 +57,10 @@
                 </div> -->
             </div>
         </div>
+    </div>
+</div>
 
-        <div style="display:none;" id="content2" class="content">
+        <div style="display:none;" id="content2" class="content js-loop">
 
             <!-- <img class="imageContent" style="max-width:100%;padding-top:30vw;padding-bottom:50vw;" src="images/eclipse.jpg"> -->
             <!-- <div class="viddiv" style="height:80vw;">
@@ -1177,14 +1179,16 @@
 
             <div class="chapter" id="16thePrivileged">
                 <p class="textContent" style="padding-top:50vw;padding-bottom:20vw;">I thought I was looking at <br/>transparent beings.</p>
-            <p class="textContent" style="margin-top:100vw;margin-bottom:20vw;">I thought they were looking at me.</p>
-            <p class="textContent" style="margin-top:100vw;margin-bottom:20vw;">But they pass me by.</p>
-            <p class="textContent" style="margin-top:130vw;margin-bottom:20vw;">How can I stroke you?<br/>How can I pat you?</p>
-            <!-- <img class="imageContent" style="padding-top:30vw;" src="16thePrivileged/sk.jpg"> -->
-            <p class="textContent" style="margin-top:150vw;margin-bottom:20vw;">On one hand, I am jealous of you.</p>
-            <p class="textContent" style="margin-top:100vw;margin-bottom:20vw;">Your eyes no longer look sad.</p>
-            <p class="textContent" style="margin-top:100vw;">Only sparkling eyes sense the sadness.</p>
-            <!-- <img class="imageContent" style="padding-top:100vw;" src="16thePrivileged/neu.jpg"> -->
+                <p class="textContent" style="margin-top:100vw;margin-bottom:20vw;">I thought they were looking at me.</p>
+                <p class="textContent" style="margin-top:100vw;margin-bottom:20vw;">But they pass me by.</p>
+                <p class="textContent" style="margin-top:130vw;margin-bottom:20vw;">How can I stroke you?<br/>How can I pat you?</p>
+                <!-- <img class="imageContent" style="padding-top:30vw;" src="16thePrivileged/sk.jpg"> -->
+                <p class="textContent" style="margin-top:150vw;margin-bottom:20vw;">On one hand, I am jealous of you.</p>
+                <p class="textContent" style="margin-top:100vw;margin-bottom:20vw;">Your eyes no longer look sad.</p>
+                <p class="textContent" style="margin-top:100vw;">Only sparkling eyes sense the sadness.</p>
+                <!-- <img class="imageContent" style="padding-top:100vw;" src="16thePrivileged/neu.jpg"> -->
+            </div>
+
             <div class="chapter" id="15selfPortraits">
                 <model-viewer
                 class="vrContent"
@@ -1414,6 +1418,27 @@
 <div class="chapterpad3"></div>
 <div class="chapterpad4"></div>
 
+            <div class="content is-clone">
+
+                <img class="imageContent" style="max-width:5%;padding-top:1vw;margin-top:1vw;margin-right:1vw" src="1iamdead/scroll.png">
+                <p class="textContent" style="margin-top:35vw;margin-bottom:500;">"I am dead!"</p>
+                    <p class="textContent"></p>
+                    <model-viewer
+                        class="vrContent"
+                        style="width:70vw;height:70vw;max-width:95%;"
+                        src="1iamdead/1ratgltf/1rat.gltf"
+                        ios-src="1iamdead/Untitled8.usdz"
+                        alt=""
+                        shadow-intensity="1"
+                        exposure=".7"
+                        camera-controls
+                        environment-image="4thebirth/bggradient.jpg"
+                        auto-rotate
+                        ar
+                    >
+                        <input type="image" src="vr.png" slot="ar-button" style="border: none; position: absolute; bottom:3vw;right:2vw;"/>
+                        ></model-viewer>
+            </div>
         </div>
     </div>
 </div>
