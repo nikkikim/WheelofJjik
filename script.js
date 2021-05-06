@@ -77,16 +77,25 @@ var isMobile = true;
 // }
 
 function isClickBackground(event){
-    let container = document.getElementById('content2');
-    let c2 = document.getElementById('startviddiv');
-    let c3 = document.getElementById('video2');
+    // let container = document.getElementById('content2');
+    // let c2 = document.getElementById('startviddiv');
+    // let c3 = document.getElementById('video2');
+    let soundBar = document.getElementById('soundBars');
     // if (container !== event.target && !container.contains(event.target)){
     //     return true;
     // }
-    if (event.target == c2 || event.target == c3 || event.target == container){
-        return false;
+    console.log("detect click");
+    console.log(soundBar);
+    console.log(event.target);
+    console.log(soundBar == event.target);
+    // console.log(event.target);
+    // if (event.target == c2 || event.target == c3 || event.target == container){
+    //     return false;
+    // }
+    if (event.target === soundBar){
+        return true;
     }
-    return true;
+    return false;
 }
 
 var doc;
@@ -150,20 +159,19 @@ function videoHandler(e) {
     document.getElementById('video2').remove();
     document.getElementById('startviddiv').remove();
     document.getElementById('content2').style.display = 'block';
-    // document.getElementById('empty').remove();
     window.onscroll = function () {};
-    $(window).scroll(function() {
-        $('video').each(function(){
-            if ($(this)[0].id === 'video2'){
-                return;
-            }
-            if ($(this).is(':in-viewport(100)')) {
-                $(this)[0].play();
-            } else {
-                $(this)[0].pause();
-            }
-        });
-        $('.chapterTitle').css({'text-decoration':'none'});
+    $('.viewport').scroll(function() {
+        // $('video').each(function(){
+        //     if ($(this)[0].id === 'video2'){
+        //         return;
+        //     }
+        //     if ($(this).is(':in-viewport(100)')) {
+        //         $(this)[0].play();
+        //     } else {
+        //         $(this)[0].pause();
+        //     }
+        // });
+        // $('.chapterTitle').css({'text-decoration':'none'});
         // $('.chapter:in-viewport(950)').each(function(){
         //     let chpT = document.getElementById('T'+$(this)[0].id);
         //     chpT.style.textDecoration = 'underline';
@@ -177,21 +185,18 @@ function videoHandler(e) {
 
 function getScrollPos () {
     // return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
-    return window.pageYOffset;
+    return $('.viewport')[0].scrollTop;
 }
 
 function setScrollPos (pos) {
-    console.log("SETTTTTT");
-    // context.scrollTop = pos;
-    document.body.scrollTop = pos;
+    // document.body.scrollTop = pos;
+    $('.viewport')[0].scrollTop = pos;
 }
 
 function getClonesHeight () {
     clonesHeight = 0;
 
     for (i = 0; i < clones.length; i += 1) {
-        console.log("clones");
-        console.log(clones[0]);
         clonesHeight = clonesHeight + clones[i].offsetHeight;
     }
 
@@ -199,7 +204,6 @@ function getClonesHeight () {
 }
 
 function reCalc () {
-    console.log("reeecalllcl");
     scrollHeight = context.scrollHeight;
     clonesHeight = getClonesHeight();
 
@@ -211,18 +215,26 @@ function reCalc () {
 function scrollUpdate () {
   if (!disableScroll) {
       scrollPos = getScrollPos();
-      console.log(scrollPos);
-      console.log(clonesHeight);
+      // console.log(scrollPos);
+      // console.log(clonesHeight);
+      // console.log(scrollHeight);
+
+      if (scrollPos > 10000){
+          $('.scrollIcon').hide();
+      }
 
       if (clonesHeight + scrollPos >= scrollHeight) {
           // Scroll to the top when you’ve reached the bottom
+          console.log("scroll up");
           setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
           disableScroll = true;
-      } else if (scrollPos <= 0) {
-          // Scroll to the bottom when you reach the top
-          setScrollPos(scrollHeight - clonesHeight);
-          disableScroll = true;
-    }
+      }
+    //   } else if (scrollPos <= 0) {
+    //       // Scroll to the bottom when you reach the top
+    //       console.log("scroll down");
+    //       setScrollPos(scrollHeight - clonesHeight);
+    //       disableScroll = true;
+    // }
   }
 
   if (disableScroll) {
