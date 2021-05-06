@@ -62,19 +62,19 @@ var isMobile = true;
 //     // window.stop();
 // }
 
-// window.onload = function (){
-//     if (document.getElementById('video2') != undefined){
-//         document.getElementById('video2').addEventListener('ended', videoHandler, false);
-//     } else {
-//         document.getElementById('content2').style.display = 'block';
-//         console.log("No video");
-//     }
-// };
-// function videoHandler(e) {
-//     // What you want to do after the event
-//     document.getElementById('content2').style.display = 'block';
-//     document.getElementById('video2').style.display = 'none';
-// }
+window.onload = function (){
+    if (document.getElementById('video2') != undefined){
+        document.getElementById('video2').addEventListener('ended', videoHandler, false);
+    } else {
+        document.getElementById('content2').style.display = 'block';
+        console.log("No video");
+    }
+};
+function videoHandler(e) {
+    // What you want to do after the event
+    document.getElementById('content2').style.display = 'block';
+    document.getElementById('video2').style.display = 'none';
+}
 
 function isClickBackground(event){
     // let container = document.getElementById('content2');
@@ -142,7 +142,6 @@ window.onload = function (){
         clonesHeight = 0;
         i = 0;
         init();
-
     } else {
         // document.getElementById('video2').style.display = 'none';
         // document.getElementById('contents').style.display = 'none';
