@@ -77,18 +77,35 @@ function videoHandler(e) {
 }
 
 function isClickBackground(event){
-    let container = document.getElementById('content2');
-    let c2 = document.getElementById('startviddiv');
-    let c3 = document.getElementById('video2');
+    // let container = document.getElementById('content2');
+    // let c2 = document.getElementById('startviddiv');
+    // let c3 = document.getElementById('video2');
+    let soundBar = document.getElementById('soundBars');
     // if (container !== event.target && !container.contains(event.target)){
     //     return true;
     // }
-    if (event.target == c2 || event.target == c3 || event.target == container){
-        return false;
+    console.log("detect click");
+    console.log(soundBar);
+    console.log(event.target);
+    console.log(soundBar == event.target);
+    // console.log(event.target);
+    // if (event.target == c2 || event.target == c3 || event.target == container){
+    //     return false;
+    // }
+    if (event.target === soundBar){
+        return true;
     }
-    return true;
+    return false;
 }
 
+var doc;
+var context;
+var clones;
+var disableScroll;
+var scrollHeight;
+var scrollPos;
+var clonesHeight;
+var i;
 
 window.onload = function (){
     if (isMobile){
@@ -115,6 +132,16 @@ window.onload = function (){
         } else {
             document.getElementById('content2').style.display = 'block';
         }
+        doc = window.document;
+        context = doc.querySelector('.js-loop');
+        clones = context.querySelectorAll('.is-clone');
+        console.log(clones);
+        disableScroll = false;
+        scrollHeight = 0;
+        scrollPos = 0;
+        clonesHeight = 0;
+        i = 0;
+        init();
     } else {
         // document.getElementById('video2').style.display = 'none';
         // document.getElementById('contents').style.display = 'none';
@@ -131,25 +158,106 @@ function videoHandler(e) {
     document.getElementById('video2').remove();
     document.getElementById('startviddiv').remove();
     document.getElementById('content2').style.display = 'block';
-    // document.getElementById('empty').remove();
     window.onscroll = function () {};
-    $(window).scroll(function() {
-        $('video').each(function(){
-            if ($(this)[0].id === 'video2'){
-                return;
-            }
-            if ($(this).is(':in-viewport(100)')) {
-                $(this)[0].play();
-            } else {
-                $(this)[0].pause();
-            }
-        });
-        $('.chapterTitle').css({'text-decoration':'none'});
-        $('.chapter:in-viewport(950)').each(function(){
-            let chpT = document.getElementById('T'+$(this)[0].id);
-            chpT.style.textDecoration = 'underline';
-        });
+    $('.viewport').scroll(function() {
+        // $('video').each(function(){
+        //     if ($(this)[0].id === 'video2'){
+        //         return;
+        //     }
+        //     if ($(this).is(':in-viewport(100)')) {
+        //         $(this)[0].play();
+        //     } else {
+        //         $(this)[0].pause();
+        //     }
+        // });
+        // $('.chapterTitle').css({'text-decoration':'none'});
+        // $('.chapter:in-viewport(950)').each(function(){
+        //     let chpT = document.getElementById('T'+$(this)[0].id);
+        //     chpT.style.textDecoration = 'underline';
+        // });
+        reCalc();
+        window.requestAnimationFrame(scrollUpdate);
     });
     // document.getElementById('content2').style.display = 'block';
     // document.getElementById('video2').style.display = 'none';
 }
+
+function getScrollPos () {
+    // return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
+    return $('.viewport')[0].scrollTop;
+}
+
+function setScrollPos (pos) {
+    // document.body.scrollTop = pos;
+    $('.viewport')[0].scrollTop = pos;
+}
+
+function getClonesHeight () {
+    clonesHeight = 0;
+
+    for (i = 0; i < clones.length; i += 1) {
+        clonesHeight = clonesHeight + clones[i].offsetHeight;
+    }
+
+    return clonesHeight;
+}
+
+function reCalc () {
+    scrollHeight = context.scrollHeight;
+    clonesHeight = getClonesHeight();
+
+    if (scrollPos <= 0) {
+        setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+    }
+}
+
+function scrollUpdate () {
+  if (!disableScroll) {
+      scrollPos = getScrollPos();
+      // console.log(scrollPos);
+      // console.log(clonesHeight);
+      // console.log(scrollHeight);
+
+      if (scrollPos > 10000){
+          $('.scrollIcon').hide();
+      }
+
+      if (clonesHeight + scrollPos >= scrollHeight) {
+          // Scroll to the top when you’ve reached the bottom
+          console.log("scroll up");
+          setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+          disableScroll = true;
+      }
+    //   } else if (scrollPos <= 0) {
+    //       // Scroll to the bottom when you reach the top
+    //       console.log("scroll down");
+    //       setScrollPos(scrollHeight - clonesHeight);
+    //       disableScroll = true;
+    // }
+  }
+
+  if (disableScroll) {
+    // Disable scroll-jumping for a short time to avoid flickering
+    window.setTimeout(function () {
+      disableScroll = false;
+    }, 40);
+  }
+}
+
+function init () {
+  reCalc();
+  // context.addEventListener('scroll', function () {
+  //     console.log("hahahah");
+  //   window.requestAnimationFrame(scrollUpdate);
+  // }, false);
+
+  window.addEventListener('resize', function () {
+    window.requestAnimationFrame(reCalc);
+  }, false);
+}
+
+// if (document.readyState !== 'loading') {
+//     init();
+// } else {
+//     doc.addEventListener('DOMContentLoaded', init, false);
+// }
