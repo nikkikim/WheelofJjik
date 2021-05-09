@@ -50,17 +50,17 @@ function toggleSound() {
 }
 
 var isMobile = true;
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    // true for mobile device
-    isMobile = true;
-    document.write("mobile device");
-    console.log("mobile");
-}else{
-    // false for not mobile device
-    isMobile = false;
-    document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
-    // window.stop();
-}
+// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+//     // true for mobile device
+//     isMobile = true;
+//     document.write("mobile device");
+//     console.log("mobile");
+// }else{
+//     // false for not mobile device
+//     isMobile = false;
+//     document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
+//     // window.stop();
+// }
 
 window.onload = function (){
     if (document.getElementById('video2') != undefined){
