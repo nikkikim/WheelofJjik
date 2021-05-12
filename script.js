@@ -49,18 +49,19 @@ function toggleSound() {
     }
 }
 
+var hasStarted = false;
 var isMobile = true;
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    // true for mobile device
-    isMobile = true;
-    document.write("mobile device");
-    console.log("mobile");
-}else{
-    // false for not mobile device
-    isMobile = false;
-    document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
-    // window.stop();
-}
+// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+//     // true for mobile device
+//     isMobile = true;
+//     document.write("mobile device");
+//     console.log("mobile");
+// }else{
+//     // false for not mobile device
+//     isMobile = false;
+//     document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
+//     // window.stop();
+// }
 
 window.onload = function (){
     if (document.getElementById('video2') != undefined){
@@ -80,6 +81,17 @@ function isClickBackground(event){
     // let container = document.getElementById('content2');
     // let c2 = document.getElementById('startviddiv');
     // let c3 = document.getElementById('video2');
+    console.log("click!!");
+    if (!hasStarted){
+        document.getElementById('introImage').remove();
+        let vid = document.getElementById('video2');
+        if (vid != undefined){
+            vid.style.display = 'block';
+        }
+        toggleSound();
+        hasStarted = true;
+        return true;
+    }
     let soundBar = document.getElementById('soundBars');
     // if (container !== event.target && !container.contains(event.target)){
     //     return true;
