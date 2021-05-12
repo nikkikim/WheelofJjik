@@ -120,17 +120,19 @@ var clonesHeight;
 var i;
 
 document.addEventListener('click', function( event ) {
-    if (isClickBackground(event)) {
-        console.log("isssss");
-    } else {
-        let slider = document.getElementById('slider');
-        if (slider != undefined){
-            let sList = slider.classList;
-            let isOpen = slider.classList.contains('slide-in');
-            slider.classList.remove("slide-in");
-            slider.classList.remove("slide-out");
+    if (isMobile){
+        if (isClickBackground(event)) {
+            console.log("isssss");
+        } else {
+            let slider = document.getElementById('slider');
+            if (slider != undefined){
+                let sList = slider.classList;
+                let isOpen = slider.classList.contains('slide-in');
+                slider.classList.remove("slide-in");
+                slider.classList.remove("slide-out");
 
-            slider.classList.add(isOpen ? 'slide-out' : 'slide-in');
+                slider.classList.add(isOpen ? 'slide-out' : 'slide-in');
+            }
         }
     }
 });
@@ -163,7 +165,7 @@ window.onload = function (){
         // document.getElementById('contents').style.display = 'none';
 
         // document.getElementById('content2').style.display = 'none';
-        document.getElementById('video2').remove();
+        document.getElementById('startviddiv').remove();
         document.getElementById('contents').remove();
         document.getElementById('content2').remove();
     }
