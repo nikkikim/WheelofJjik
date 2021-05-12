@@ -119,6 +119,12 @@ var scrollPos;
 var clonesHeight;
 var i;
 
+document.addEventListener('click', function( event ) {
+    if (isClickBackground(event)) {
+        console.log("isssss");
+    }
+});
+
 window.onload = function (){
     if (isMobile){
         console.log("ismobile");
