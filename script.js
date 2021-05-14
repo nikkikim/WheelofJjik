@@ -59,8 +59,8 @@ if(/Macintosh|Windows/i.test(navigator.userAgent)){
 }else{
     // true for mobile device
     isMobile = true;
-    document.write("mobile device");
-    console.log("mobile");
+    // document.write("mobile device");
+    // console.log("mobile");
 }
 
 window.onload = function (){
