@@ -54,7 +54,7 @@ var isMobile = true;
 if(/Macintosh|Windows/i.test(navigator.userAgent)){
     // false for not mobile device
     isMobile = false;
-    document.writeln("<div style='position:fixed;width:100%;height:100%;top:150px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
+    document.writeln("<div style='position:fixed;width:100%;height:100%;top:250px;left:0px;background-color:black;'><img style='width:50%;margin:0 auto;display:block;' src='ma.jpg'></div>");
     // window.stop();
 }else{
     // true for mobile device
