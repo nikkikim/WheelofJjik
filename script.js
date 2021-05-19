@@ -82,9 +82,6 @@ window.onload = function (){
 // }
 
 function isClickBackground(event){
-    // let container = document.getElementById('content2');
-    // let c2 = document.getElementById('startviddiv');
-    // let c3 = document.getElementById('video2');
     console.log("click!!");
     if (!hasStarted){
         document.getElementById('introImage').remove();
@@ -110,17 +107,10 @@ function isClickBackground(event){
     menus.push(document.getElementById('menuScrollp'));
     menus.push(document.getElementById('menuScrollbara'));
     menus.push(document.getElementById('menuScrollbarp'));
-    // if (container !== event.target && !container.contains(event.target)){
-    //     return true;
-    // }
+    menus.push(document.getElementById('menuScrollbarimg'));
+
     console.log("detect click");
-    // console.log(soundBar);
     console.log(event.target);
-    // console.log(soundBar == event.target);
-    // console.log(event.target);
-    // if (event.target == c2 || event.target == c3 || event.target == container){
-    //     return false;
-    // }
     for (let i = 0; i < menus.length; i++){
         if (event.target === menus[i]){
             return true;
@@ -385,31 +375,41 @@ function activateButton(list, isOn){
     elems.push(document.getElementById('menuScrollp'));
     elems.push(document.getElementById('menuSkipp'));
 
+
+    let img = document.getElementById('menuScrollbarimg');
+
     console.log(elems);
     for (let i = 0; i < elems.length; i++){
         if (list.includes(i)){
             if (isOn){
+                elems[i].style.isActive = true;
                 if (i == 0){
                     elems[i].style.opacity = '1.00';
                 } else {
                     elems[i].style.color = '#FFFFFFFF';
                     let children = elems[i].childNodes;
-                    console.log(children);
                     for (let j = 0; j < children.length; j++){
-                        if (children[j].style != undefined){
+                        let tn = children[j].tagName;
+                        if (tn == "A"){
                             children[j].style.color = '#FFFFFFFF';
+                        } else if (tn == "IMG") {
+                            children[j].style.opacity = '1.00';
                         }
                     }
                 }
             } else {
+                elems[i].style.isActive = false;
                 if (i == 0){
                     elems[i].style.opacity = '0.25';
                 } else {
                     elems[i].style.color = '#FFFFFF40';
                     let children = elems[i].childNodes;
                     for (let j = 0; j < children.length; j++){
-                        if (children[j].style != undefined){
+                        let tn = children[j].tagName;
+                        if (tn == "A"){
                             children[j].style.color = '#FFFFFF40';
+                        } else if (tn == "IMG") {
+                            children[j].style.opacity = '0.25';
                         }
                     }
                 }
@@ -420,8 +420,11 @@ function activateButton(list, isOn){
 
 var isShowScrollbar = false;
 function toggleScrollbar(){
+    if (document.getElementById('menuScrollbarimg').style.opacity.toString() < 1.0){
+        return;
+    }
     let ps = getScrollPos();
-    // let vp = document.getElementsByClassName("viewport");
+    let image = document.getElementById("menuScrollbarimg");
     let vp = $(".viewport")[0];
     console.log("toggle");
     console.log(isShowScrollbar);
@@ -430,9 +433,11 @@ function toggleScrollbar(){
     if (isShowScrollbar){
         vp.style.marginRight = "0px";
         vp.style.paddingRight = "0px";
+        image.src = "eyeOpen.png";
     } else {
         vp.style.marginRight = "-100px";
         vp.style.paddingRight = "100px";
+        image.src = "eyeClose.png";
     }
     setScrollPos(ps);
 
