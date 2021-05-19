@@ -93,7 +93,7 @@ function isClickBackground(event){
             vid.style.display = 'block';
         }
         toggleSound();
-        activateButton([0, 3], true);
+        activateButton([0, 4], true);
         hasStarted = true;
         return true;
     }
@@ -108,6 +108,8 @@ function isClickBackground(event){
     menus.push(document.getElementById('menuSkipp'));
     menus.push(document.getElementById('menuScrolla'));
     menus.push(document.getElementById('menuScrollp'));
+    menus.push(document.getElementById('menuScrollbara'));
+    menus.push(document.getElementById('menuScrollbarp'));
     // if (container !== event.target && !container.contains(event.target)){
     //     return true;
     // }
@@ -218,8 +220,8 @@ function videoHandler(e) {
     });
     // document.getElementById('content2').style.display = 'block';
     // document.getElementById('video2').style.display = 'none';
-    activateButton([3], false);
-    activateButton([0, 1, 2], true);
+    activateButton([4], false);
+    activateButton([0, 1, 2, 3], true);
     isAutoScroll = false;
     textFontSize = 2.5;
 }
@@ -232,6 +234,9 @@ function getScrollPos () {
 function setScrollPos (pos) {
     // document.body.scrollTop = pos;
     $('.viewport')[0].scrollTop = pos;
+    console.log("cspos Set");
+    console.log($('.viewport')[0].scrollTop);
+    console.log($('.viewport')[0]);
 }
 
 function getClonesHeight () {
@@ -376,6 +381,7 @@ function activateButton(list, isOn){
     let elems = [];
     elems.push(document.getElementById('soundBars'));
     elems.push(document.getElementById('menuTextp'));
+    elems.push(document.getElementById('menuScrollbarp'));
     elems.push(document.getElementById('menuScrollp'));
     elems.push(document.getElementById('menuSkipp'));
 
@@ -410,4 +416,24 @@ function activateButton(list, isOn){
             }
         }
     }
+}
+
+var isShowScrollbar = false;
+function toggleScrollbar(){
+    let ps = getScrollPos();
+    // let vp = document.getElementsByClassName("viewport");
+    let vp = $(".viewport")[0];
+    console.log("toggle");
+    console.log(isShowScrollbar);
+    isShowScrollbar = !isShowScrollbar;
+    console.log(isShowScrollbar);
+    if (isShowScrollbar){
+        vp.style.marginRight = "0px";
+        vp.style.paddingRight = "0px";
+    } else {
+        vp.style.marginRight = "-100px";
+        vp.style.paddingRight = "100px";
+    }
+    setScrollPos(ps);
+
 }

@@ -21,6 +21,7 @@ body {
      * you are supporting.
      * padding = -margin
      */
+
     margin-right: -100px;
     padding-right: 100px;
 }
@@ -264,9 +265,9 @@ model-viewer{
 .menuText{
     color: #FFFFFF40;
     font-family: 'Dosis-ExtraLight', Aerial, sans-serif;
-    font-size: 4.5vw;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    font-size: 4.0vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
     text-align: center;
 }
 
